@@ -9,7 +9,6 @@
 // @grant       none
 // ==/UserScript==
 
-
 this.$ = this.jQuery = jQuery.noConflict(true);
 
 document.addEventListener("DOMNodeInserted", function () {

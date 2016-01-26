@@ -2,6 +2,7 @@
 // @name ServiceCloud Local Links
 // @namespace com.esko.bevi.scloclinks
 // @description Changes links to jobfolders to local links
+// @downloadURL https://github.com/tuxfre/esko-SC-scripts/raw/master/ServiceCloud%20Local%20Links.user.js
 // @include     https://esko.my.salesforce.com/*
 // @version 4
 // @grant none

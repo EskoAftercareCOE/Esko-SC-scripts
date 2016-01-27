@@ -28,7 +28,7 @@ function DownloadAll() {
     jQuery("a.actionLink:contains('View')").each(function( index ) {
         var FileName = jQuery(this).attr("title").split("-");
         SaveToDisk(jQuery(this).attr("href"), trim(FileName[FileName.length-1]));
-        //GM_download(jQuery(this).attr("href"), trim(FileName[FileName.length-1]))
+        //GM_download(jQuery(this).attr("href"), trim(FileName[FileName.length-1]));
     });    
 }
 

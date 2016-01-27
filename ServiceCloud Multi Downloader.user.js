@@ -5,7 +5,8 @@
 // @downloadURL https://github.com/tuxfre/esko-SC-scripts/raw/master/ServiceCloud%20Multi%20Downloader.user.js
 // @include     https://esko.my.salesforce.com/*
 // @require     http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js
-// @version     2
+// @require     https://raw.githubusercontent.com/rndme/download/master/download.min.js
+// @version     3
 // @grant       none
 // ==/UserScript==
 
@@ -25,11 +26,12 @@ document.addEventListener("DOMNodeInserted", function () {
 function DownloadAll() {
     jQuery("a.actionLink:contains('View')").each(function( index ) {
         var FileName = jQuery(this).attr("title").split("-");
-        SaveToDisk(jQuery(this).attr("href"), trim(FileName[FileName.length-1]));
+        //SaveToDisk(jQuery(this).attr("href"), trim(FileName[FileName.length-1]));
+        download(jQuery(this).attr("href"));
     });    
 }
 
-
+/// SaveToDisk taken from http://muaz-khan.blogspot.com/2012/10/save-files-on-disk-using-javascript-or.html
 function SaveToDisk(fileURL, fileName) {
     // for non-IE
     if (!window.ActiveXObject) {

@@ -6,7 +6,7 @@
 // @downloadURL https://github.com/tuxfre/esko-SC-scripts/raw/master/ServiceCloud%20Multi%20Downloader.user.js
 // @include     https://esko.my.salesforce.com/*
 // @require     http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js
-// @version     5
+// @version     6
 // @icon        data:image/gif;base64,R0lGODlhIAAgAKIHAAGd3K/CNOz4/aje8zGv3HLJ63PAsv///yH5BAEAAAcALAAAAAAgACAAQAPGeLrc/k4MQKu9lIxRyhaCIhBVYAZGdgZYCwwMKLmFLEOPDeL8MgKEFXBFclkIoMJxRTRmaqGedEqtigSFYmYgGRAInV3vlzGsDFonoCZSAlAAQyqeKrDUFK7FHCDJh3B4bBJueBYeNmOEX4hRVo+QkZKTV4SNBzpiUlguXxcamRFphhhgmgIVQSZyJ6NGgz98Jl9npFwTFLOlJqQ1FkIqJ4ZIZIAEfGi6amyYacdnrk8dXI6YXVlGX4yam9hHXJTWOuHk5RAJADs=
 // @grant       none
 // ==/UserScript==
@@ -27,7 +27,8 @@ document.addEventListener("DOMNodeInserted", function () {
 function DownloadAll() {
     jQuery("a.actionLink:contains('View')").each(function( index ) {
         var FileName = jQuery(this).attr("title").split("-");
-        SaveToDisk(jQuery(this).attr("href"), trim(FileName[FileName.length-1]));
+        //SaveToDisk(jQuery(this).attr("href"), trim(FileName[FileName.length-1]));
+        GM_download(jQuery(this).attr("href"), trim(FileName[FileName.length-1]))
     });    
 }
 

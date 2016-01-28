@@ -1,4 +1,5 @@
-esko-SC-scripts
+![esko](https://www.esko.com/design/esko/img/logo-esko-new.png "Esko")
+-SC-scripts
 ====== 
 Scripts used to workaround SC's annoyances
 

@@ -1,6 +1,6 @@
 ![esko](https://www.esko.com/design/esko/img/logo-esko-new.png "Esko") Service Cloud scripts
 ====== 
-## Scripts used to workaround SC's annoyances in eskos support environment ##
+## Scripts used to workaround SC's annoyances in esko's support environment ##
 
 These scripts will be useful for anyone at esko being annoyed by SC's limitations
 

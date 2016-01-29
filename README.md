@@ -1,8 +1,17 @@
 ![esko](https://www.esko.com/design/esko/img/logo-esko-new.png "Esko") Service Cloud scripts
 ====== 
-Scripts used to workaround SC's annoyances in eskos support environment
+## Scripts used to workaround SC's annoyances in eskos support environment ##
 
 These scripts will be useful for anyone at esko being annoyed by SC's limitations
+
+The scripts are what is called "userscripts". This is a specfic type of JavaScript, meant to be exectuted via a browser extension and that can interact and modify web pages.
+
+They are meant to be used with
++ TamperMonkey (Chrome, Safari, Opera) see http://tampermonkey.net/
++ Greasemonkey (Firefox) see https://addons.mozilla.org/en-US/firefox/addon/greasemonkey/
+
+In theory, modern extensions should detect the script as userscript if you click on the links on this page (for example [ServiceCloud Refresh List](./ServiceCloud Refresh List.user.js)) and offer to install the script.
+
 
 At the moment we have the following scripts:
 + [ServiceCloud Refresh List](./ServiceCloud Refresh List.user.js)

@@ -11,7 +11,7 @@ Their use is recommended via these extensions:
 + Greasemonkey :thumbsup: (Firefox) see https://addons.mozilla.org/en-US/firefox/addon/greasemonkey/
 + NinjaKit (Chrome, Opera) see https://github.com/os0x/NinjaKit
 
-In theory, modern extensions should detect the script as userscript if you click on the install links (:floppy_disk:) on this page and offer to install the script. On the other hand, the view link (:page_with_curl:) will bring you to the beautified source code.
+In theory, modern extensions should detect the script as userscript if you click on the install links (:floppy_disk:) on this page and offer to install the script. On the other hand, the view link (:page_with_curl:) will take you to the beautified source code.
 
 ***
 

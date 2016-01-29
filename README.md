@@ -6,9 +6,10 @@ These scripts will be useful for anyone at esko being annoyed by ServiceCloud's 
 
 The scripts are what is called "userscripts". This is a specfic type of JavaScript, meant to be exectuted via a browser extension and that can interact with and/or modify web pages.
 
-They are meant to be used with:
-+ TamperMonkey (Chrome, Safari, Opera) see http://tampermonkey.net/
-+ Greasemonkey (Firefox) see https://addons.mozilla.org/en-US/firefox/addon/greasemonkey/
+Their use is recommended via these extensions:
++ TamperMonkey :thumbsup: (Chrome, Safari, Opera) see http://tampermonkey.net/
++ Greasemonkey :thumbsup: (Firefox) see https://addons.mozilla.org/en-US/firefox/addon/greasemonkey/
++ NinjaKit (Chrome, Opera) see https://github.com/os0x/NinjaKit
 
 In theory, modern extensions should detect the script as userscript if you click on the install links (:floppy_disk:) on this page and offer to install the script. On the other hand, the view link (:page_with_curl:) will bring you to the beautified source code.
 

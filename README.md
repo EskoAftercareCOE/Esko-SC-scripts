@@ -19,7 +19,9 @@ In theory, modern extensions should detect the script as userscript if you click
 + ServiceCloud Refresh List [:floppy_disk:](https://github.com/tuxfre/esko-SC-scripts/raw/master/ServiceCloud Refresh List.user.js "Install the script") [:page_with_curl:](./ServiceCloud Refresh List.user.js "See the source")
   ------
 
-  refreshes any list view every 30 sec (configurable)
+  refreshes any list view every 30 sec (configurable via a smal edit in the script)
+  
+  todo: add a GUI for config
   
   :heavy_check_mark: _(working fine)_
 
@@ -29,13 +31,18 @@ In theory, modern extensions should detect the script as userscript if you click
   changes jobfolder links to direct system links (file:// or smb://)
   
   :heavy_check_mark: _(working fine)_
+  
+  todo: more testing
 
 + ServiceCloud Multi Downloader [:floppy_disk:](https://github.com/tuxfre/esko-SC-scripts/raw/master/ServiceCloud Multi Downloader.user.js "Install the script") [:page_with_curl:](./ServiceCloud Multi Downloader.user.js "See the source")
   ------
 
-  allows for downloading of attachements from an email view
+  allows for downloading all of the of attachements from an email view in one click
   
   :wavy_dash: _**(work in progress, may be unstable)**_
+  At the moment, this works only with Chrome, Safari will open tabs and Firefow won't do a thing. 
+  
+  todo: more bowser support => if anyone has experience with GreaseMonkey's GM_download or with this polyfill https://gist.github.com/ccloli/832a8350b822f3ff5094 I'd be interested.
 
 + ServiceCloud Email Signature [:floppy_disk:](https://github.com/tuxfre/esko-SC-scripts/raw/master/ServiceCloud Email Signature.user.js "Install the scripts") [:page_with_curl:](./ServiceCloud Email Signature.user.js "See the source")
   ------
@@ -43,6 +50,8 @@ In theory, modern extensions should detect the script as userscript if you click
   automatically adds a signature in a mail composer
   
   :heavy_multiplication_x: _**(work in progress, doesn't work at all)**_
+  
+  todo: make it work
 
 ***
   

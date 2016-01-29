@@ -41,7 +41,7 @@ In theory, modern extensions should detect the script as userscript if you click
   **description:** allows for downloading all of the of attachements from an email view in one click
   
   **status:** :wavy_dash: _**(work in progress, may be unstable)**_
-  At the moment, this works only with Chrome, Safari will open tabs and Firefow won't do a thing. 
+  At the moment, this works only with Chrome, Safari will open tabs and Firefox won't do a thing. 
   
   **todo:** support for other browsers => if anyone has experience with GreaseMonkey's GM_download or with this polyfill https://gist.github.com/ccloli/832a8350b822f3ff5094 I'd be interested.
 

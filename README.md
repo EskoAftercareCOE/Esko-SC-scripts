@@ -2,7 +2,7 @@
 ====== 
 ## A few userscripts  to workaround ServiceCloud's annoyances in Esko's support environment ##
 
-These scripts will be useful for anyone at esko being annoyed by ServiceCloud's limitations (at least that's the hope).
+These scripts will be useful for anyone at esko being annoyed by ServiceCloud's limitations (_at least that's the hope_).
 
 The scripts are what is called "userscripts". This is a specfic type of JavaScript, meant to be exectuted via a browser extension and that can interact with and/or modify web pages.
 
@@ -44,3 +44,7 @@ In theory, modern extensions should detect the script as userscript if you click
   :heavy_multiplication_x: _**(work in progress, doesn't work at all)**_
 
 ***
+  
+  
+  
+This is a secret _ninja_ project brought to you by bevi@esko.com

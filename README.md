@@ -14,28 +14,28 @@ In theory, modern extensions should detect the script as userscript if you click
 
 
 At the moment we have the following scripts:
-+ [ServiceCloud Refresh List](https://github.com/tuxfre/esko-SC-scripts/raw/master/ServiceCloud Refresh List.user.js)
++ [ServiceCloud Refresh List](https://github.com/tuxfre/esko-SC-scripts/raw/master/ServiceCloud Refresh List.user.js) [:page_with_curl:](./ServiceCloud Refresh List.user.js "See the source")
   ------
 
   refreshes any list view every 30 sec (configurable)
   
   :heavy_check_mark: _(working fine)_
 
-+ [ServiceCloud Local Links](https://github.com/tuxfre/esko-SC-scripts/raw/master/ServiceCloud Local Links.user.js)
++ [ServiceCloud Local Links](https://github.com/tuxfre/esko-SC-scripts/raw/master/ServiceCloud Local Links.user.js) [:page_with_curl:](./ServiceCloud Local Links.user.js "See the source")
   ------
 
   changes jobfolder links to direct system links (file:// or smb://)
   
   :heavy_check_mark: _(working fine)_
 
-+ [ServiceCloud Multi Downloader](https://github.com/tuxfre/esko-SC-scripts/raw/master/ServiceCloud Multi Downloader.user.js)
++ [ServiceCloud Multi Downloader](https://github.com/tuxfre/esko-SC-scripts/raw/master/ServiceCloud Multi Downloader.user.js) [:page_with_curl:](./ServiceCloud Multi Downloader.user.js "See the source")
   ------
 
   allows for downloading of attachements from an email view
   
   :wavy_dash: _**(work in progress, may be unstable)**_
 
-+ [ServiceCloud Email Signature](https://github.com/tuxfre/esko-SC-scripts/raw/master/ServiceCloud Email Signature.user.js)
++ [ServiceCloud Email Signature](https://github.com/tuxfre/esko-SC-scripts/raw/master/ServiceCloud Email Signature.user.js) [:page_with_curl:](./ServiceCloud Email Signature.user.js "See the source")
   ------
 
   automatically adds a signature in a mail composer

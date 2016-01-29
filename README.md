@@ -17,7 +17,7 @@ In theory, modern extensions should detect the script as userscript if you click
 
 On the other hand, the view source link (:page_with_curl:) will take you to the beautified source code.
 
-### Issues / Feature request
+### Issues / Feature requests
 Please use the GitHub issue tracker and create a new issue at https://github.com/tuxfre/esko-SC-scripts/issues/new
 
 ***

@@ -2,9 +2,9 @@
 ====== 
 ## A few userscripts  to workaround ServiceCloud's annoyances in Esko's support environment ##
 
-These scripts will be useful for anyone at esko being annoyed by SC's limitations
+These scripts will be useful for anyone at esko being annoyed by ServiceCloud's limitations (at least that's the hope).
 
-The scripts are what is called "userscripts". This is a specfic type of JavaScript, meant to be exectuted via a browser extension and that can interact and modify web pages.
+The scripts are what is called "userscripts". This is a specfic type of JavaScript, meant to be exectuted via a browser extension and that can interact with and/or modify web pages.
 
 They are meant to be used with:
 + TamperMonkey (Chrome, Safari, Opera) see http://tampermonkey.net/

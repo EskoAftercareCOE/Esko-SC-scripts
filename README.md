@@ -29,7 +29,7 @@ In theory, modern extensions should detect the script as userscript if you click
 + ServiceCloud Local Links [:floppy_disk:](https://github.com/tuxfre/esko-SC-scripts/raw/master/ServiceCloud Local Links.user.js "Install the script") [:page_with_curl:](./ServiceCloud Local Links.user.js "See the source")
   ------
 
-  **description:**changes jobfolder links to direct system links (file:// or smb://)
+  **description:** changes jobfolder links to direct system links (file:// or smb://)
   
   **status:** :heavy_check_mark: _(working fine)_
   
@@ -38,7 +38,7 @@ In theory, modern extensions should detect the script as userscript if you click
 + ServiceCloud Multi Downloader [:floppy_disk:](https://github.com/tuxfre/esko-SC-scripts/raw/master/ServiceCloud Multi Downloader.user.js "Install the script") [:page_with_curl:](./ServiceCloud Multi Downloader.user.js "See the source")
   ------
 
-  **description:**allows for downloading all of the of attachements from an email view in one click
+  **description:** allows for downloading all of the of attachements from an email view in one click
   
   **status:** :wavy_dash: _**(work in progress, may be unstable)**_
   At the moment, this works only with Chrome, Safari will open tabs and Firefow won't do a thing. 
@@ -48,7 +48,7 @@ In theory, modern extensions should detect the script as userscript if you click
 + ServiceCloud Email Signature [:floppy_disk:](https://github.com/tuxfre/esko-SC-scripts/raw/master/ServiceCloud Email Signature.user.js "Install the scripts") [:page_with_curl:](./ServiceCloud Email Signature.user.js "See the source")
   ------
 
-  **description:**automatically adds a signature in a mail composer
+  **description:** automatically adds a signature in a mail composer
   
   **status:** :heavy_multiplication_x: _**(work in progress, doesn't work at all)**_
   

@@ -21,9 +21,10 @@ In theory, modern extensions should detect the script as userscript if you click
 
   refreshes any list view every 30 sec (configurable via a smal edit in the script)
   
-  todo: add a GUI for config
+  status: :heavy_check_mark: _(working fine)_
   
-  :heavy_check_mark: _(working fine)_
+  todo: add a GUI for config
+
 
 + ServiceCloud Local Links [:floppy_disk:](https://github.com/tuxfre/esko-SC-scripts/raw/master/ServiceCloud Local Links.user.js "Install the script") [:page_with_curl:](./ServiceCloud Local Links.user.js "See the source")
   ------
@@ -39,7 +40,7 @@ In theory, modern extensions should detect the script as userscript if you click
 
   allows for downloading all of the of attachements from an email view in one click
   
-  :wavy_dash: _**(work in progress, may be unstable)**_
+  status: :wavy_dash: _**(work in progress, may be unstable)**_
   At the moment, this works only with Chrome, Safari will open tabs and Firefow won't do a thing. 
   
   todo: more bowser support => if anyone has experience with GreaseMonkey's GM_download or with this polyfill https://gist.github.com/ccloli/832a8350b822f3ff5094 I'd be interested.
@@ -49,7 +50,7 @@ In theory, modern extensions should detect the script as userscript if you click
 
   automatically adds a signature in a mail composer
   
-  :heavy_multiplication_x: _**(work in progress, doesn't work at all)**_
+  status: :heavy_multiplication_x: _**(work in progress, doesn't work at all)**_
   
   todo: make it work
 

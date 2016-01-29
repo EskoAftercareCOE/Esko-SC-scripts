@@ -10,7 +10,7 @@ They are meant to be used with
 + TamperMonkey (Chrome, Safari, Opera) see http://tampermonkey.net/
 + Greasemonkey (Firefox) see https://addons.mozilla.org/en-US/firefox/addon/greasemonkey/
 
-In theory, modern extensions should detect the script as userscript if you click on the links on this page (for example [ServiceCloud Refresh List](./ServiceCloud Refresh List.user.js)) and offer to install the script.
+In theory, modern extensions should detect the script as userscript if you click on the links on this page (for example [ServiceCloud Refresh List](./raw/master/ServiceCloud%20Refresh%20List.user.js)) and offer to install the script.
 
 
 At the moment we have the following scripts:

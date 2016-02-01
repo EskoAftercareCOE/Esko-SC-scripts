@@ -55,6 +55,14 @@ Please use the [GitHub issue tracker](https://github.com/tuxfre/esko-SC-scripts/
  | **status** | :heavy_multiplication_x: _**(work in progress, doesn't work at all)**_ |
  | **todo**|  make it work |
 
++ ServiceCloud Declutter close form [:floppy_disk:](https://github.com/tuxfre/esko-SC-scripts/raw/master/ServiceCloud Declutter close form.user.js "Install the scripts") [:page_with_curl:](./ServiceCloud Declutter close form.user.js "See the source")
+  ------
+ | **description** | Folds up some part of the form when closing a case to save screen estate |
+ | ---: | --- |
+ | **status** | :wavy_dash: _**(work in progress)**_ • At the moment, it can hide some objects on page, but it can't show them again if needed |
+ | **todo**|  attch jQuery's toggle() to newly created DOM-objects |
+
+
 ***
   
   

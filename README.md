@@ -26,40 +26,34 @@ Please use the [GitHub issue tracker](https://github.com/tuxfre/esko-SC-scripts/
 + ServiceCloud Refresh List [:floppy_disk:](https://github.com/tuxfre/esko-SC-scripts/raw/master/ServiceCloud Refresh List.user.js "Install the script") [:page_with_curl:](./ServiceCloud Refresh List.user.js "See the source")
   ------
 
-  **description:** refreshes any list view every 30 sec (configurable via a small edit in the script)
-  
-  **status:** :heavy_check_mark: _(working fine)_
-  
-  **todo:** add a GUI for config
+ | **description** | refreshes any list view every 30 sec (configurable via a small edit in the script) |
+ | ---: | --- |
+ | **status** | :heavy_check_mark: _(working fine)_ |
+ | **todo**|  add a GUI for config |
 
 
 + ServiceCloud Local Links [:floppy_disk:](https://github.com/tuxfre/esko-SC-scripts/raw/master/ServiceCloud Local Links.user.js "Install the script") [:page_with_curl:](./ServiceCloud Local Links.user.js "See the source")
   ------
+ | **description** | changes jobfolder links to direct system links (file:// or smb://) |
+ | ---: | --- |
+ | **status** | :heavy_check_mark: _(working fine)_ |
+ | **todo**|  more testing |
 
-  **description:** changes jobfolder links to direct system links (file:// or smb://)
-  
-  **status:** :heavy_check_mark: _(working fine)_
-  
-  **todo:** more testing
 
 + ServiceCloud Multi Downloader [:floppy_disk:](https://github.com/tuxfre/esko-SC-scripts/raw/master/ServiceCloud Multi Downloader.user.js "Install the script") [:page_with_curl:](./ServiceCloud Multi Downloader.user.js "See the source")
   ------
+ | **description** | allows for downloading all of the of attachements from an email view in one click |
+ | ---: | --- |
+ | **status** | :wavy_dash: _**(work in progress, may be unstable)**_ • At the moment, this works only with Chrome, Safari will open tabs and Firefox won't do a thing |
+ | **todo**|  support for other browsers => if anyone has experience with GreaseMonkey's GM_download or with this polyfill https://gist.github.com/ccloli/832a8350b822f3ff5094 I'd be interested |
 
-  **description:** allows for downloading all of the of attachements from an email view in one click
-  
-  **status:** :wavy_dash: _**(work in progress, may be unstable)**_
-  At the moment, this works only with Chrome, Safari will open tabs and Firefox won't do a thing
-  
-  **todo:** support for other browsers => if anyone has experience with GreaseMonkey's GM_download or with this polyfill https://gist.github.com/ccloli/832a8350b822f3ff5094 I'd be interested
 
 + ServiceCloud Email Signature [:floppy_disk:](https://github.com/tuxfre/esko-SC-scripts/raw/master/ServiceCloud Email Signature.user.js "Install the scripts") [:page_with_curl:](./ServiceCloud Email Signature.user.js "See the source")
   ------
-
-  **description:** automatically adds a signature with image(s) in a mail composer field
-  
-  **status:** :heavy_multiplication_x: _**(work in progress, doesn't work at all)**_
-  
-  **todo:** make it work
+ | **description** | automatically adds a signature with image(s) in a mail composer field |
+ | ---: | --- |
+ | **status** | :heavy_multiplication_x: _**(work in progress, doesn't work at all)**_ |
+ | **todo**|  make it work |
 
 ***
   

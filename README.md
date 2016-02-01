@@ -17,7 +17,7 @@ Their use is recommended via these extensions:
 + NinjaKit (Chrome, Opera) see https://github.com/os0x/NinjaKit
 
 ### Installation
-In theory, modern extensions should detect the script as userscript if you click on the install links (:floppy_disk:) on this page and offer to install the script.
+In theory, modern extensions should detect a script as userscript if you click on the install links (:floppy_disk:) on this page and offer to install it.
 
 On the other hand, the view source link (:page_with_curl:) will take you to the beautified source code.
 

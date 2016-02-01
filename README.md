@@ -33,6 +33,7 @@ Please use the [GitHub issue tracker](https://github.com/tuxfre/esko-SC-scripts/
  | **description** | refreshes any list view every 30 sec (configurable via a small edit in the script) |
  | ---: | --- |
  | **status** | :heavy_check_mark: _(working fine)_ |
+ | **tested OK with** | Firefox + GM / Safari + TM / Chrome + TM |
  | **todo**|  add a GUI for config |
 
 
@@ -41,14 +42,25 @@ Please use the [GitHub issue tracker](https://github.com/tuxfre/esko-SC-scripts/
  | **description** | changes jobfolder links to direct system links (file:// or smb://) |
  | ---: | --- |
  | **status** | :heavy_check_mark: _(working fine)_ |
+ | **tested OK with** | Firefox + GM / Safari + TM / Chrome + TM |
  | **todo**|  more testing |
+
++ ServiceCloud Declutter close form [:floppy_disk:](https://github.com/tuxfre/esko-SC-scripts/raw/master/ServiceCloud Declutter close form.user.js "Install the scripts") [:page_with_curl:](./ServiceCloud Declutter close form.user.js "See the source")
+  ------
+ | **description** | Folds up some part of the form when closing a case to save screen estate |
+ | ---: | --- |
+ | **status** | :heavy_check_mark: _(working ok)_ |
+ | **tested OK with** | Safari + TM |
+ | **todo**|  more testing + nicer UI + make it configurable |
 
 
 + ServiceCloud Multi Downloader [:floppy_disk:](https://github.com/tuxfre/esko-SC-scripts/raw/master/ServiceCloud Multi Downloader.user.js "Install the script") [:page_with_curl:](./ServiceCloud Multi Downloader.user.js "See the source")
   ------
  | **description** | allows for downloading all of the of attachements from an email view in one click |
  | ---: | --- |
- | **status** | :wavy_dash: _**(work in progress, may be unstable)**_ • At the moment, this works only with Chrome, Safari will open tabs and Firefox won't do a thing |
+ | **status** | :wavy_dash: _**(work in progress, may be unstable)**_  |
+ | **tested OK with** | Chrome + TM |
+ | **compatibility notes** | Safari will open tabs and Firefox won't do a thing |
  | **todo**|  support for other browsers => if anyone has experience with GreaseMonkey's GM_download or with this polyfill https://gist.github.com/ccloli/832a8350b822f3ff5094 I'd be interested |
 
 
@@ -57,14 +69,9 @@ Please use the [GitHub issue tracker](https://github.com/tuxfre/esko-SC-scripts/
  | **description** | automatically adds a signature with image(s) in a mail composer field |
  | ---: | --- |
  | **status** | :heavy_multiplication_x: _**(work in progress, doesn't work at all)**_ |
+ | **tested OK with** | N/A |
  | **todo**|  make it work |
 
-+ ServiceCloud Declutter close form [:floppy_disk:](https://github.com/tuxfre/esko-SC-scripts/raw/master/ServiceCloud Declutter close form.user.js "Install the scripts") [:page_with_curl:](./ServiceCloud Declutter close form.user.js "See the source")
-  ------
- | **description** | Folds up some part of the form when closing a case to save screen estate |
- | ---: | --- |
- | **status** | :wavy_dash: _**(work in progress)**_ • At the moment, it can hide some objects on page, but it can't show them again if needed |
- | **todo**|  attch jQuery's toggle() to newly created DOM-objects |
 
 
 ***

@@ -21,6 +21,8 @@ In theory, modern extensions should detect a script as userscript if you click o
 
 On the other hand, the view source link (:page_with_curl:) will take you to the beautified source code.
 
+And finally, the screenshot icon (:camera:) shows an example of the result of the script when necessary.
+
 ### Issues / Feature requests
 Please use the [GitHub issue tracker](https://github.com/tuxfre/esko-SC-scripts/issues/new "GitHub issue tracker") and create a new issue.
 
@@ -45,7 +47,7 @@ Please use the [GitHub issue tracker](https://github.com/tuxfre/esko-SC-scripts/
  | **tested OK with** | Firefox + GM / Safari + TM / Chrome + TM |
  | **todo**|  more testing |
 
-+ ServiceCloud Declutter close form [:floppy_disk:](https://github.com/tuxfre/esko-SC-scripts/raw/master/ServiceCloud Declutter close form.user.js "Install the scripts") [:page_with_curl:](./ServiceCloud Declutter close form.user.js "See the source")
++ ServiceCloud Declutter close form [:floppy_disk:](https://github.com/tuxfre/esko-SC-scripts/raw/master/ServiceCloud Declutter close form.user.js "Install the scripts") [:page_with_curl:](./ServiceCloud Declutter close form.user.js "See the source") [:camera:](./screencaps/ServiceCloud%20Declutter%20close%20form.png "Screen capture of result")
   ------
  | **description** | Folds up some part of the form when closing a case to save screen estate |
  | ---: | --- |

@@ -21,6 +21,8 @@ In theory, modern extensions should detect a script as userscript if you click o
 
 On the other hand, the view source link (:page_with_curl:) will take you to the beautified source code.
 
+And finally, the screenshot icon (:camera:) shows an example of the result of the script when necessary.
+
 ### Issues / Feature requests
 Please use the [GitHub issue tracker](https://github.com/tuxfre/esko-SC-scripts/issues/new "GitHub issue tracker") and create a new issue.
 
@@ -45,6 +47,7 @@ Please use the [GitHub issue tracker](https://github.com/tuxfre/esko-SC-scripts/
  | **tested OK with** | Firefox + GM / Safari + TM / Chrome + TM |
  | **todo**|  more testing |
 
+<<<<<<< HEAD
 + ServiceCloud Declutter Edit Form [:floppy_disk:](https://github.com/tuxfre/esko-SC-scripts/raw/master/ServiceCloud Declutter Edit Form.user.js "Install the scripts") [:page_with_curl:](./ServiceCloud Declutter Edit Form.user.js "See the source")
   ------
  | **description** | Folds up some part of the form when editing a case to save screen estate |
@@ -52,6 +55,15 @@ Please use the [GitHub issue tracker](https://github.com/tuxfre/esko-SC-scripts/
  | **status** | :heavy_check_mark: _(working ok)_ |
  | **tested OK with** | Safari + TM |
  | **todo**| add regex to @include to limit action to edit pages + more testing + make it configurable + when a section is unfolded replace + by - |
+=======
++ ServiceCloud Declutter Edit Form [:floppy_disk:](https://github.com/tuxfre/esko-SC-scripts/raw/master/ServiceCloud Declutter Edit Form.user.js "Install the scripts") [:page_with_curl:](./ServiceCloud Declutter Edit Form.user.js "See the source") [:camera:](./screencaps/ServiceCloud%20Declutter%20Edit%20Form.png "Screen capture of result")
+  ------
+ | **description** | Folds up some part of the edit form to save screen estate |
+ | ---: | --- |
+ | **status** | :heavy_check_mark: _(working ok)_ |
+ | **tested OK with** | Safari + TM |
+ | **todo**|  more testing + better UX + make it configurable |
+>>>>>>> origin/master
 
 
 + ServiceCloud Multi Downloader [:floppy_disk:](https://github.com/tuxfre/esko-SC-scripts/raw/master/ServiceCloud Multi Downloader.user.js "Install the script") [:page_with_curl:](./ServiceCloud Multi Downloader.user.js "See the source")

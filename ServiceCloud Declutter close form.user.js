@@ -14,7 +14,7 @@
 this.$ = this.jQuery = jQuery.noConflict(true);
 
 if (/^Case Edit\: ([0-9]{8}) ~ Salesforce - Unlimited Edition$/i.test(jQuery(document).attr('title'))) {
-	var targets = ["#head_2_ep", "#head_3_ep", "#head_4_ep", "#head_5_ep", "#head_6_ep", "#head_7_ep", "#head_8_ep", "#head_9_ep", "#head_11_ep", "#head_1_ep"];
+	var targets = ["#head_2_ep", "#head_3_ep", "#head_4_ep", "#head_5_ep", "#head_6_ep", "#head_7_ep", "#head_8_ep", "#head_9_ep", "#head_11_ep", "#head_12_ep"];
 	jQuery.each(targets, function( index, value ) {
 		var myContents = jQuery(value).next();
 		var myContentID = value.substr(1)+"_contents";

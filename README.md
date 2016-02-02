@@ -65,14 +65,14 @@ Please use the [GitHub issue tracker](https://github.com/tuxfre/esko-SC-scripts/
  | **todo**|  support for other browsers => if anyone has experience with GreaseMonkey's GM_download or with this polyfill https://gist.github.com/ccloli/832a8350b822f3ff5094 I'd be interested |
 
 
-+ ServiceCloud Clean View Toolbar.user [:floppy_disk:](https://github.com/tuxfre/esko-SC-scripts/raw/master/ServiceCloud Clean View Toolbar.user.user.js "Install the script") [:page_with_curl:](./ServiceCloud Clean View Toolbar.user "See the source")
-------
-| **description** | Tries to save screen estate by masking or moving some items in and around the toolbar |
-| ---: | --- |
-| **status** | :wavy_dash: _**(work in progress, resource hog)**_  |
-| **tested OK with** | Safari + TM |
-| **compatibility notes** | This monster will bring your browser down, don't use it, really |
-| **todo**|  Find a better event to hook to in order to modify the page, add an @include regex to limit the pages scanned => better resource usage |
+ + ServiceCloud Clean View Toolbar.user [:floppy_disk:](https://github.com/tuxfre/esko-SC-scripts/raw/master/ServiceCloud Clean View Toolbar.user.user.js "Install the script") [:page_with_curl:](./ServiceCloud Clean View Toolbar.user "See the source")
+  ------
+ | **description** | Tries to save screen estate by masking or moving some items in and around the toolbar |
+ | ---: | --- |
+ | **status** | :wavy_dash: _**(work in progress, resource hog)**_  |
+ | **tested OK with** | Safari + TM |
+ | **compatibility notes** | This monster will bring your browser down, don't use it, really |
+ | **todo**|  Find a better event to hook to in order to modify the page, add an @include regex to limit the pages scanned => better resource usage |
 
 
 + ServiceCloud Email Signature [:floppy_disk:](https://github.com/tuxfre/esko-SC-scripts/raw/master/ServiceCloud Email Signature.user.js "Install the scripts") [:page_with_curl:](./ServiceCloud Email Signature.user.js "See the source")

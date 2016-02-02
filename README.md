@@ -31,7 +31,6 @@ Please use the [GitHub issue tracker](https://github.com/tuxfre/esko-SC-scripts/
 ###At the moment we have the following scripts:
 + ServiceCloud Refresh List [:floppy_disk:](https://github.com/tuxfre/esko-SC-scripts/raw/master/ServiceCloud Refresh List.user.js "Install the script") [:page_with_curl:](./ServiceCloud Refresh List.user.js "See the source")
   ------
-
  | **description** | refreshes any list view every 30 sec (configurable via a small edit in the script) |
  | ---: | --- |
  | **status** | :heavy_check_mark: _(working fine)_ |
@@ -53,16 +52,7 @@ Please use the [GitHub issue tracker](https://github.com/tuxfre/esko-SC-scripts/
  | ---: | --- |
  | **status** | :heavy_check_mark: _(working ok)_ |
  | **tested OK with** | Safari + TM |
- | **todo**| add regex to @include to limit action to edit pages + more testing + make it configurable + when a section is unfolded replace + by - |
-
-=======
-+ ServiceCloud Declutter Edit Form [:floppy_disk:](https://github.com/tuxfre/esko-SC-scripts/raw/master/ServiceCloud Declutter Edit Form.user.js "Install the scripts") [:page_with_curl:](./ServiceCloud Declutter Edit Form.user.js "See the source") [:camera:](./screencaps/ServiceCloud%20Declutter%20Edit%20Form.png "Screen capture of result")
-  ------
- | **description** | Folds up some part of the edit form to save screen estate |
- | ---: | --- |
- | **status** | :heavy_check_mark: _(working ok)_ |
- | **tested OK with** | Safari + TM |
- | **todo**|  more testing + better UX + make it configurable |
+ | **todo**| more testing + make it configurable + when a section is unfolded replace + by - |
 
 
 + ServiceCloud Multi Downloader [:floppy_disk:](https://github.com/tuxfre/esko-SC-scripts/raw/master/ServiceCloud Multi Downloader.user.js "Install the script") [:page_with_curl:](./ServiceCloud Multi Downloader.user.js "See the source")
@@ -73,6 +63,16 @@ Please use the [GitHub issue tracker](https://github.com/tuxfre/esko-SC-scripts/
  | **tested OK with** | Chrome + TM |
  | **compatibility notes** | Safari will open tabs and Firefox won't do a thing |
  | **todo**|  support for other browsers => if anyone has experience with GreaseMonkey's GM_download or with this polyfill https://gist.github.com/ccloli/832a8350b822f3ff5094 I'd be interested |
+
+
++ ServiceCloud Clean View Toolbar.user [:floppy_disk:](https://github.com/tuxfre/esko-SC-scripts/raw/master/ServiceCloud Clean View Toolbar.user.user.js "Install the script") [:page_with_curl:](./ServiceCloud Clean View Toolbar.user "See the source")
+------
+| **description** | Tries to save screen estate by masking or moving some items in and around the toolbar |
+| ---: | --- |
+| **status** | :wavy_dash: _**(work in progress, resource hog)**_  |
+| **tested OK with** | Safari + TM |
+| **compatibility notes** | This monster will bring your browser down, don't use it, really |
+| **todo**|  Find a better event to hook to in order to modify the page, add an @include regex to limit the pages scanned => better resource usage |
 
 
 + ServiceCloud Email Signature [:floppy_disk:](https://github.com/tuxfre/esko-SC-scripts/raw/master/ServiceCloud Email Signature.user.js "Install the scripts") [:page_with_curl:](./ServiceCloud Email Signature.user.js "See the source")

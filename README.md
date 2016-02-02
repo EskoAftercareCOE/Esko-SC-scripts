@@ -45,13 +45,13 @@ Please use the [GitHub issue tracker](https://github.com/tuxfre/esko-SC-scripts/
  | **tested OK with** | Firefox + GM / Safari + TM / Chrome + TM |
  | **todo**|  more testing |
 
-+ ServiceCloud Declutter close form [:floppy_disk:](https://github.com/tuxfre/esko-SC-scripts/raw/master/ServiceCloud Declutter close form.user.js "Install the scripts") [:page_with_curl:](./ServiceCloud Declutter close form.user.js "See the source")
++ ServiceCloud Declutter Edit Form [:floppy_disk:](https://github.com/tuxfre/esko-SC-scripts/raw/master/ServiceCloud Declutter Edit Form.user.js "Install the scripts") [:page_with_curl:](./ServiceCloud Declutter Edit Form.user.js "See the source")
   ------
- | **description** | Folds up some part of the form when closing a case to save screen estate |
+ | **description** | Folds up some part of the form when editing a case to save screen estate |
  | ---: | --- |
  | **status** | :heavy_check_mark: _(working ok)_ |
  | **tested OK with** | Safari + TM |
- | **todo**|  more testing + nicer UI + make it configurable |
+ | **todo**| add regex to @include to limit action to edit pages + more testing + make it configurable + when a section is unfolded replace + by - |
 
 
 + ServiceCloud Multi Downloader [:floppy_disk:](https://github.com/tuxfre/esko-SC-scripts/raw/master/ServiceCloud Multi Downloader.user.js "Install the script") [:page_with_curl:](./ServiceCloud Multi Downloader.user.js "See the source")

@@ -3,8 +3,8 @@
 // @author      bevi@esko.com
 // @namespace   com.esko.bevi.scdeclutt.close
 // @description Hide some panels from ServiceCloud's case closing form
-// @downloadURL https://github.com/tuxfre/esko-SC-scripts/raw/master/ServiceCloud%20Declutter%20close%20form.user.js
-// @include     https://esko.my.salesforce.com/*
+// @downloadURL https://github.com/tuxfre/esko-SC-scripts/raw/master/ServiceCloud%20Declutter%20Edit%20Form.user.js
+// @include     ^http(s)?:\/\/(esko\.my\.salesforce\.com)\/([^\/]+)\/e\?(.*)$
 // @require     http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js
 // @version     3
 // @icon        data:image/gif;base64,R0lGODlhIAAgAKIHAAGd3K/CNOz4/aje8zGv3HLJ63PAsv///yH5BAEAAAcALAAAAAAgACAAQAPGeLrc/k4MQKu9lIxRyhaCIhBVYAZGdgZYCwwMKLmFLEOPDeL8MgKEFXBFclkIoMJxRTRmaqGedEqtigSFYmYgGRAInV3vlzGsDFonoCZSAlAAQyqeKrDUFK7FHCDJh3B4bBJueBYeNmOEX4hRVo+QkZKTV4SNBzpiUlguXxcamRFphhhgmgIVQSZyJ6NGgz98Jl9npFwTFLOlJqQ1FkIqJ4ZIZIAEfGi6amyYacdnrk8dXI6YXVlGX4yam9hHXJTWOuHk5RAJADs=

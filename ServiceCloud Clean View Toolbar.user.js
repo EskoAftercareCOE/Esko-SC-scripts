@@ -3,6 +3,7 @@
 // @author      bevi@esko.com
 // @namespace   com.esko.bevi.sctbar
 // @description Save some space at the top by combining/masking objects
+// @downloadURL https://github.com/tuxfre/esko-SC-scripts/raw/master/ServiceCloud%20Clean%20View%20Toolbar.user.js
 // @include     https://esko.my.salesforce.com/*
 // @require     http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js
 // @version     2

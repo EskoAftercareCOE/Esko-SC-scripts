@@ -65,7 +65,7 @@ Please use the [GitHub issue tracker](https://github.com/tuxfre/esko-SC-scripts/
  | **todo**|  support for other browsers => if anyone has experience with GreaseMonkey's GM_download or with this polyfill https://gist.github.com/ccloli/832a8350b822f3ff5094 I'd be interested |
 
 
- + ServiceCloud Clean View Toolbar.user [:floppy_disk:](https://github.com/tuxfre/esko-SC-scripts/raw/master/ServiceCloud Clean View Toolbar.user.user.js "Install the script") [:page_with_curl:](./ServiceCloud Clean View Toolbar.user "See the source")
++ ServiceCloud Clean View Toolbar.user [:floppy_disk:](https://github.com/tuxfre/esko-SC-scripts/raw/master/ServiceCloud Clean View Toolbar.user.user.js "Install the script") [:page_with_curl:](./ServiceCloud Clean View Toolbar.user "See the source")
   ------
  | **description** | Tries to save screen estate by masking or moving some items in and around the toolbar |
  | ---: | --- |

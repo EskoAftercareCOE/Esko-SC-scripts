@@ -47,13 +47,13 @@ Please use the [GitHub issue tracker](https://github.com/tuxfre/esko-SC-scripts/
  | **tested OK with** | Firefox + GM / Safari + TM / Chrome + TM |
  | **todo**|  more testing |
 
-+ ServiceCloud Declutter close form [:floppy_disk:](https://github.com/tuxfre/esko-SC-scripts/raw/master/ServiceCloud Declutter close form.user.js "Install the scripts") [:page_with_curl:](./ServiceCloud Declutter close form.user.js "See the source") [:camera:](./screencaps/ServiceCloud%20Declutter%20close%20form.png "Screen capture of result")
++ ServiceCloud Declutter Edit Form [:floppy_disk:](https://github.com/tuxfre/esko-SC-scripts/raw/master/ServiceCloud Declutter Edit Form.user.js "Install the scripts") [:page_with_curl:](./ServiceCloud Declutter Edit Form.user.js "See the source") [:camera:](./screencaps/ServiceCloud%20Declutter%20Edit%20Form.png "Screen capture of result")
   ------
- | **description** | Folds up some part of the form when closing a case to save screen estate |
+ | **description** | Folds up some part of the edit form to save screen estate |
  | ---: | --- |
  | **status** | :heavy_check_mark: _(working ok)_ |
  | **tested OK with** | Safari + TM |
- | **todo**|  more testing + nicer UI + make it configurable |
+ | **todo**|  more testing + better UX + make it configurable |
 
 
 + ServiceCloud Multi Downloader [:floppy_disk:](https://github.com/tuxfre/esko-SC-scripts/raw/master/ServiceCloud Multi Downloader.user.js "Install the script") [:page_with_curl:](./ServiceCloud Multi Downloader.user.js "See the source")

@@ -29,7 +29,7 @@ document.addEventListener("DOMNodeInserted", function () {
 function DownloadAll() {
 	jQuery("a.actionLink:contains('View')").each(function( index ) {
 		var FileName = jQuery(this).attr("title").split("-");
-		if (typeof GM_download !== 'undefined') {
+		if (typeof GM_download === 'function') {
 			GM_download(jQuery(this).attr("href"), trim(FileName[FileName.length-1]));
 		} else {
 			SaveToDisk(jQuery(this).attr("href"), trim(FileName[FileName.length-1]));

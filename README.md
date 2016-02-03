@@ -31,11 +31,12 @@ Please use the [GitHub issue tracker](https://github.com/tuxfre/esko-SC-scripts/
 ###At the moment we have the following scripts:
 + ServiceCloud Refresh List [:floppy_disk:](https://github.com/tuxfre/esko-SC-scripts/raw/master/ServiceCloud Refresh List.user.js "Install the script") [:page_with_curl:](./ServiceCloud Refresh List.user.js "See the source")
   ------
- | **description** | refreshes any list view every 30 sec (configurable via a small edit in the script) |
+ | **description** | refreshes any list view at user-defined interval |
  | ---: | --- |
  | **status** | :heavy_check_mark: _(working fine)_ |
+ | **config** | Use the gear icon (![gear icon](https://documentation.cpanel.net/download/attachments/9895955/Gear%20Icon.png?version=4&modificationDate=1451940421609&api=v2 "Gear Icon")) on the right of ServiceCloud's top toolbar |
  | **tested OK with** | Firefox + GM / Safari + TM / Chrome + TM |
- | **todo**|  add a GUI for config |
+ | **todo**|  test the config GUI |
 
 
 + ServiceCloud Local Links [:floppy_disk:](https://github.com/tuxfre/esko-SC-scripts/raw/master/ServiceCloud Local Links.user.js "Install the script") [:page_with_curl:](./ServiceCloud Local Links.user.js "See the source")

@@ -3,6 +3,7 @@
 // @author      bevi@esko.com
 // @namespace   com.esko.bevi.sctelescope
 // @description Queries Telescope for latest update
+// @downloadURL  https://github.com/tuxfre/esko-SC-scripts/raw/master/ServiceCloud%20Telescope%20Status.user.js
 // @include     https://esko.my.salesforce.com/support/console/highlightpanel.apexp*
 // @require     http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js
 // @require     https://openuserjs.org/src/libs/sizzle/GM_config.js

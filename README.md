@@ -56,6 +56,7 @@ Please use the [GitHub issue tracker](https://github.com/tuxfre/esko-SC-scripts/
  | **config** | Use the gear icon (![gear icon](https://documentation.cpanel.net/download/attachments/9895955/Gear%20Icon.png?version=4&modificationDate=1451940421609&api=v2 "Gear Icon")) next to the customer code in the top right info panel |
  | **tested OK with** | Safari + TM |
  | **todo**|  more testing |
+ | **notes**|  if you find a case where the leds are grey but there is a report (click the leds to check) please [open an issue](https://github.com/tuxfre/esko-SC-scripts/issues/new "open an issue") mentioning the case number and the link to the report |
 
 
 + ServiceCloud Declutter Edit Form [:floppy_disk:](https://github.com/tuxfre/esko-SC-scripts/raw/master/ServiceCloud Declutter Edit Form.user.js "Install the scripts") [:page_with_curl:](./ServiceCloud Declutter Edit Form.user.js "See the source")

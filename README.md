@@ -36,7 +36,7 @@ Please use the [GitHub issue tracker](https://github.com/tuxfre/esko-SC-scripts/
  | **status** | :heavy_check_mark: _(working fine)_ |
  | **config** | Use the gear icon (![gear icon](https://documentation.cpanel.net/download/attachments/9895955/Gear%20Icon.png?version=4&modificationDate=1451940421609&api=v2 "Gear Icon")) on the right of ServiceCloud's top toolbar |
  | **tested OK with** | Firefox + GM / Safari + TM / Chrome + TM |
- | **todo**|  test the config GUI |
+ | **todo**|  nothing |
 
 
 + ServiceCloud Local Links [:floppy_disk:](https://github.com/tuxfre/esko-SC-scripts/raw/master/ServiceCloud Local Links.user.js "Install the script") [:page_with_curl:](./ServiceCloud Local Links.user.js "See the source")
@@ -46,6 +46,17 @@ Please use the [GitHub issue tracker](https://github.com/tuxfre/esko-SC-scripts/
  | **status** | :heavy_check_mark: _(working fine)_ |
  | **tested OK with** | Firefox + GM / Safari + TM / Chrome + TM |
  | **todo**|  more testing |
+
+
++ ServiceCloud Telescope Status [:floppy_disk:](https://github.com/tuxfre/esko-SC-scripts/raw/master/ServiceCloud Telescope Status.user.js "Install the script") [:page_with_curl:](./ServiceCloud Telescope Status.user.js "See the source")
+  ------
+ | **description** | adds TeleScope info to customer panel |
+ | ---: | --- |
+ | **status** | :heavy_check_mark: _(working fine)_ |
+ | **config** | Use the gear icon (![gear icon](https://documentation.cpanel.net/download/attachments/9895955/Gear%20Icon.png?version=4&modificationDate=1451940421609&api=v2 "Gear Icon")) next to the customer code in the top right info panel |
+ | **tested OK with** | Safari + TM |
+ | **todo**|  more testing |
+
 
 + ServiceCloud Declutter Edit Form [:floppy_disk:](https://github.com/tuxfre/esko-SC-scripts/raw/master/ServiceCloud Declutter Edit Form.user.js "Install the scripts") [:page_with_curl:](./ServiceCloud Declutter Edit Form.user.js "See the source")
   ------

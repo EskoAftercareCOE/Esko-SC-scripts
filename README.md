@@ -48,7 +48,7 @@ Please use the [GitHub issue tracker](https://github.com/tuxfre/esko-SC-scripts/
  | **todo**|  more testing |
 
 
-+ ServiceCloud Telescope Status [:floppy_disk:](https://github.com/tuxfre/esko-SC-scripts/raw/master/ServiceCloud Telescope Status.user.js "Install the script") [:page_with_curl:](./ServiceCloud Telescope Status.user.js "See the source")
++ :new: ServiceCloud Telescope Status [:floppy_disk:](https://github.com/tuxfre/esko-SC-scripts/raw/master/ServiceCloud Telescope Status.user.js "Install the script") [:page_with_curl:](./ServiceCloud Telescope Status.user.js "See the source")
   ------
  | **description** | adds TeleScope info to customer panel |
  | ---: | --- |

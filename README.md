@@ -77,7 +77,7 @@ Please use the [GitHub issue tracker](https://github.com/tuxfre/esko-SC-scripts/
  | ---: | --- |
  | **status** | :wavy_dash: _**(work in progress, may be unstable)**_  |
  | **tested OK with** | Chrome + TM |
- | **compatibility notes** | Safari will open tabs and Firefox won't do a thing |
+ | **known issues** | Safari will open tabs and Firefox won't do a thing |
  | **todo**|  support for other browsers => if anyone has experience with GreaseMonkey's GM_download or with this polyfill https://gist.github.com/ccloli/832a8350b822f3ff5094 I'd be interested |
 
 
@@ -87,7 +87,7 @@ Please use the [GitHub issue tracker](https://github.com/tuxfre/esko-SC-scripts/
  | ---: | --- |
  | **status** | :wavy_dash: _**(work in progress, resource hog)**_  |
  | **tested OK with** | Safari + TM |
- | **compatibility notes** | This monster will bring your browser down, don't use it, really |
+ | **known issues** | This monster will bring your browser down, don't use it, really |
  | **todo**|  Find a better event to hook to in order to modify the page, add an @include regex to limit the pages scanned => better resource usage |
 
 

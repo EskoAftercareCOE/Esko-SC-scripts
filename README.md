@@ -36,6 +36,7 @@ Please use the [GitHub issue tracker](https://github.com/tuxfre/esko-SC-scripts/
  | **status** | :heavy_check_mark: _(working fine)_ |
  | **config** | Use the gear icon (![gear icon](https://documentation.cpanel.net/download/attachments/9895955/Gear%20Icon.png?version=4&modificationDate=1451940421609&api=v2 "Gear Icon")) on the right of ServiceCloud's top toolbar |
  | **tested OK with** | Firefox + GM / Safari + TM / Chrome + TM |
+ | **known issues** | Somtimes the config icon is displayed next to wrong objects |
  | **todo**|  nothing |
 
 
@@ -45,6 +46,7 @@ Please use the [GitHub issue tracker](https://github.com/tuxfre/esko-SC-scripts/
  | ---: | --- |
  | **status** | :heavy_check_mark: _(working fine)_ |
  | **tested OK with** | Firefox + GM / Safari + TM / Chrome + TM |
+ | **known issues**|  due to the security model, FF requires an extension to open local links, Chrome on windows refuses to open local links |
  | **todo**|  more testing |
 
 
@@ -55,6 +57,7 @@ Please use the [GitHub issue tracker](https://github.com/tuxfre/esko-SC-scripts/
  | **status** | :heavy_check_mark: _(working fine)_ |
  | **config** | Use the gear icon (![gear icon](https://documentation.cpanel.net/download/attachments/9895955/Gear%20Icon.png?version=4&modificationDate=1451940421609&api=v2 "Gear Icon")) next to the customer code in the top right info panel |
  | **tested OK with** | Safari + TM |
+ | **known issues**|  depending on how you access the case view the lights might not show, it always works from the cases list |
  | **todo**|  more testing |
  | **notes**|  if you find a case where the leds are grey but there is a report (click the leds to check) please [open an issue](https://github.com/tuxfre/esko-SC-scripts/issues/new "open an issue") mentioning the case number and the link to the report |
 

@@ -65,7 +65,7 @@ try {
 		url: teleScopeURL,
 		onload: function(response) {
 			try {
-				var teleScopeData = /^Config_([A-Za-z0-9]{3,6})_([0-9]{4})([0-9]{2})([0-9]{2})([0-9]{2})\.html$/g.exec($('<div>'+response.responseText+'</div>').find('a').attr('href'));
+				var teleScopeData = /^Config_([A-Za-z0-9]{3,6})_([0-9]{4})([0-9]{2})([0-9]{2})([0-9]{2})\.html$/g.exec(jQuery('<div>'+response.responseText+'</div>').find('a').attr('href'));
 				var teleScopeUpdate = new Date(teleScopeData[2],teleScopeData[3]-1,teleScopeData[4]);
 				difference = Math.floor((Date.now()-teleScopeUpdate)/(1000*60*60*24));
 				if (difference > AlertInterval) {

@@ -7,7 +7,7 @@
 // @include     /^http(s)?:\/\/(esko\.my\.salesforce\.com)\/([0-9A-Z]+\?)(.*)$/
 // @require     http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js
 // @require     http://ajax.googleapis.com/ajax/libs/jqueryui/1.11.1/jquery-ui.min.js
-// @version     4
+// @version     5
 // @icon        data:image/gif;base64,R0lGODlhIAAgAKIHAAGd3K/CNOz4/aje8zGv3HLJ63PAsv///yH5BAEAAAcALAAAAAAgACAAQAPGeLrc/k4MQKu9lIxRyhaCIhBVYAZGdgZYCwwMKLmFLEOPDeL8MgKEFXBFclkIoMJxRTRmaqGedEqtigSFYmYgGRAInV3vlzGsDFonoCZSAlAAQyqeKrDUFK7FHCDJh3B4bBJueBYeNmOEX4hRVo+QkZKTV4SNBzpiUlguXxcamRFphhhgmgIVQSZyJ6NGgz98Jl9npFwTFLOlJqQ1FkIqJ4ZIZIAEfGi6amyYacdnrk8dXI6YXVlGX4yam9hHXJTWOuHk5RAJADs=
 // @grant       GM_addStyle
 // ==/UserScript==
@@ -18,11 +18,14 @@ this.$ = this.jQuery = jQuery.noConflict(true);
 // let's add jQuery UI's CSS (for the tooltips)
 jQuery("head").append ('<link href="//ajax.googleapis.com/ajax/libs/jqueryui/1.11.1/themes/redmond/jquery-ui.min.css" rel="stylesheet" type="text/css">');
 
-// what time is it?
-var dateNow = Date.now();
+// a variable that will store the column specific class for 'Action Required' (we cheat a bit and set it to the most common occurence)
+var actReqColClass = 'x-grid3-hd-00ND0000006DaqB';
 
 // each time an new DOM Node is added by SC ...
 document.addEventListener('DOMNodeInserted', function () {
+
+	// what time is it?
+	var dateNow = Date.now();
 
 	// for each "line" of the result page we will do a few things...
 	jQuery('.x-grid3-row-table').each(function( index ) {
@@ -46,6 +49,8 @@ document.addEventListener('DOMNodeInserted', function () {
 		} else {
 			toolTip = 'This log has been opened for ' + dateDifference + ' minutes, ' + Math.round(dateDifference-60) + ' minutes late!';
 		}
+		toolTip = toolTip + dateOpenData[3] + '-' + (dateOpenData[2]-1) + '-' + dateOpenData[1] + '-' + dateOpenData[4] + '-' + dateOpenData[5];
+
 		jQuery(this).attr('title', toolTip);
 		//jQuery(this).tooltip({show:{effect:'fade'}, hide:{effect:'fade'}, track:true});
 
@@ -66,11 +71,27 @@ document.addEventListener('DOMNodeInserted', function () {
 			jQuery(this).css('background-color', 'rgba(0, 255, 0, 0.33)');
 		}
 
-		// let's check if some cases are pending (finance, quote, sinterklaas...)
-		if (jQuery( this ).find('.x-grid3-col-CASES_STATUS').text().lastIndexOf('Pending', 0) === 0) {
-			// let's lighten those lines
-			jQuery(this).css('opacity', '0.33');
+		// extact the classes of the Action Required column
+		var actReqColClasses = jQuery('div[title="Action Required"]').attr('class').split(/\s+/);
+		//loop through the classes
+		for (var i = 0; i < actReqColClasses.length; i++) {
+			//se
+			var macthedClass = actReqColClasses[i].match(/^x-grid3-hd-(00ND0000006Daq[A-Za-z])$/);
+			if (macthedClass !== null) {
+				actReqColClass = macthedClass[1];
+				break;
+			}
 		}
+
+		// let's check if some cases are pending (finance, quote, sinterklaas...)
+		if ((jQuery(this).find('.x-grid3-col-CASES_STATUS').text().lastIndexOf('Pending', 0) === 0)) {
+			// but only if action required isn't checked
+			if ((jQuery(this).find('.x-grid3-col-'+actReqColClass).find('.checkImg').attr('alt') == 'Not Checked')) {
+				// let's lighten those lines
+				jQuery(this).css('opacity', '0.33');
+			}
+		}
+
 	});
 }, false);
 

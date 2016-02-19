@@ -7,7 +7,7 @@
 // @include     /^http(s)?:\/\/(esko\.my\.salesforce\.com)\/([0-9A-Z]+\?)(.*)$/
 // @require     http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js
 // @require     http://ajax.googleapis.com/ajax/libs/jqueryui/1.11.1/jquery-ui.min.js
-// @version     5
+// @version     6
 // @icon        data:image/gif;base64,R0lGODlhIAAgAKIHAAGd3K/CNOz4/aje8zGv3HLJ63PAsv///yH5BAEAAAcALAAAAAAgACAAQAPGeLrc/k4MQKu9lIxRyhaCIhBVYAZGdgZYCwwMKLmFLEOPDeL8MgKEFXBFclkIoMJxRTRmaqGedEqtigSFYmYgGRAInV3vlzGsDFonoCZSAlAAQyqeKrDUFK7FHCDJh3B4bBJueBYeNmOEX4hRVo+QkZKTV4SNBzpiUlguXxcamRFphhhgmgIVQSZyJ6NGgz98Jl9npFwTFLOlJqQ1FkIqJ4ZIZIAEfGi6amyYacdnrk8dXI6YXVlGX4yam9hHXJTWOuHk5RAJADs=
 // @grant       GM_addStyle
 // ==/UserScript==
@@ -49,7 +49,7 @@ document.addEventListener('DOMNodeInserted', function () {
 		} else {
 			toolTip = 'This log has been opened for ' + dateDifference + ' minutes, ' + Math.round(dateDifference-60) + ' minutes late!';
 		}
-		toolTip = toolTip + dateOpenData[3] + '-' + (dateOpenData[2]-1) + '-' + dateOpenData[1] + '-' + dateOpenData[4] + '-' + dateOpenData[5];
+		//toolTip = toolTip + ' - ' + dateOpenData[3] + '-' + (dateOpenData[2]-1) + '-' + dateOpenData[1] + '-' + dateOpenData[4] + '-' + dateOpenData[5];
 
 		jQuery(this).attr('title', toolTip);
 		//jQuery(this).tooltip({show:{effect:'fade'}, hide:{effect:'fade'}, track:true});

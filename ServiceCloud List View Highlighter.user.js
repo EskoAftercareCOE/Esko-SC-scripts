@@ -7,7 +7,7 @@
 // @include     /^http(s)?:\/\/(esko\.my\.salesforce\.com)\/([0-9A-Z]+\?)(.*)$/
 // @require     http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js
 // @require     http://ajax.googleapis.com/ajax/libs/jqueryui/1.11.1/jquery-ui.min.js
-// @version     6
+// @version     7
 // @icon        data:image/gif;base64,R0lGODlhIAAgAKIHAAGd3K/CNOz4/aje8zGv3HLJ63PAsv///yH5BAEAAAcALAAAAAAgACAAQAPGeLrc/k4MQKu9lIxRyhaCIhBVYAZGdgZYCwwMKLmFLEOPDeL8MgKEFXBFclkIoMJxRTRmaqGedEqtigSFYmYgGRAInV3vlzGsDFonoCZSAlAAQyqeKrDUFK7FHCDJh3B4bBJueBYeNmOEX4hRVo+QkZKTV4SNBzpiUlguXxcamRFphhhgmgIVQSZyJ6NGgz98Jl9npFwTFLOlJqQ1FkIqJ4ZIZIAEfGi6amyYacdnrk8dXI6YXVlGX4yam9hHXJTWOuHk5RAJADs=
 // @grant       GM_addStyle
 // ==/UserScript==
@@ -26,6 +26,19 @@ document.addEventListener('DOMNodeInserted', function () {
 
 	// what time is it?
 	var dateNow = Date.now();
+
+	// extract the classes of the Action Required column
+	var actReqColClasses = jQuery('div[title="Action Required"]').attr('class').split(/\s+/);
+	//loop through the classes
+	for (var i = 0; i < actReqColClasses.length; i++) {
+		//se
+		var macthedClass = actReqColClasses[i].match(/^x-grid[0-9]+-hd-([A-Za-z0-9]{13,16})$/);
+		if (macthedClass !== null) {
+			actReqColClass = macthedClass[1];
+			break;
+		}
+	}
+
 
 	// for each "line" of the result page we will do a few things...
 	jQuery('.x-grid3-row-table').each(function( index ) {
@@ -71,18 +84,6 @@ document.addEventListener('DOMNodeInserted', function () {
 			jQuery(this).css('background-color', 'rgba(0, 255, 0, 0.33)');
 		}
 
-		// extact the classes of the Action Required column
-		var actReqColClasses = jQuery('div[title="Action Required"]').attr('class').split(/\s+/);
-		//loop through the classes
-		for (var i = 0; i < actReqColClasses.length; i++) {
-			//se
-			var macthedClass = actReqColClasses[i].match(/^x-grid3-hd-(00ND0000006Daq[A-Za-z])$/);
-			if (macthedClass !== null) {
-				actReqColClass = macthedClass[1];
-				break;
-			}
-		}
-
 		// let's check if some cases are pending (finance, quote, sinterklaas...)
 		if ((jQuery(this).find('.x-grid3-col-CASES_STATUS').text().lastIndexOf('Pending', 0) === 0)) {
 			// but only if action required isn't checked
@@ -94,4 +95,5 @@ document.addEventListener('DOMNodeInserted', function () {
 
 	});
 }, false);
+
 

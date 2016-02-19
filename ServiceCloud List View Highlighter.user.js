@@ -7,7 +7,7 @@
 // @include     /^http(s)?:\/\/(esko\.my\.salesforce\.com)\/([0-9A-Z]+\?)(.*)$/
 // @require     http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js
 // @require     http://ajax.googleapis.com/ajax/libs/jqueryui/1.11.1/jquery-ui.min.js
-// @version     7
+// @version     8
 // @icon        data:image/gif;base64,R0lGODlhIAAgAKIHAAGd3K/CNOz4/aje8zGv3HLJ63PAsv///yH5BAEAAAcALAAAAAAgACAAQAPGeLrc/k4MQKu9lIxRyhaCIhBVYAZGdgZYCwwMKLmFLEOPDeL8MgKEFXBFclkIoMJxRTRmaqGedEqtigSFYmYgGRAInV3vlzGsDFonoCZSAlAAQyqeKrDUFK7FHCDJh3B4bBJueBYeNmOEX4hRVo+QkZKTV4SNBzpiUlguXxcamRFphhhgmgIVQSZyJ6NGgz98Jl9npFwTFLOlJqQ1FkIqJ4ZIZIAEfGi6amyYacdnrk8dXI6YXVlGX4yam9hHXJTWOuHk5RAJADs=
 // @grant       GM_addStyle
 // ==/UserScript==
@@ -47,7 +47,7 @@ document.addEventListener('DOMNodeInserted', function () {
 		jQuery(this).css('background-color', '');
 
 		// let's fetch and store this log's creation date (regex powaaaa)
-		var dateOpenData = /^([0-9]{2})\/([0-9]{2})\/([0-9]{4}) ([0-9]{1,2}):([0-9]{2})$$/g.exec(jQuery( this ).find('.x-grid3-td-CASES_CREATED_DATE').text());
+		var dateOpenData = /^([0-9]{1,2})\/([0-9]{1,2})\/([0-9]{4}) ([0-9]{1,2}):([0-9]{2})$$/g.exec(jQuery( this ).find('.x-grid3-td-CASES_CREATED_DATE').text());
 
 		// now let's make a proper date object from what our regex extracted
 		var dateOpenObj  = new Date(dateOpenData[3],dateOpenData[2]-1,dateOpenData[1],dateOpenData[4],dateOpenData[5]);

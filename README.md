@@ -15,6 +15,9 @@ The list was moved to the [Wiki](https://github.com/tuxfre/esko-SC-scripts/wiki)
 ### Install and pre-requisites
 Check the dedicated [Wiki page](https://github.com/tuxfre/esko-SC-scripts/wiki/Install-and-Pre-requisites)
 
+### Issues & feature requests
+Please use the [Issue tracker](https://github.com/tuxfre/esko-SC-scripts/issues/new) (free [GitHub account](https://github.com/join?return_to=https%3A%2F%2Fgithub.com%2Ftuxfre%2Fesko-SC-scripts%2Fissues%2Fnew&source=login) required)
+
 ***
   
   

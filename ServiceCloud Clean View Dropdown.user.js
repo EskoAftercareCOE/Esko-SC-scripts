@@ -27,7 +27,7 @@ GM_config.init(
 			{
 				'label': 'Hide items containing (list of words, separated by a comma)', // Appears next to field
 				'type': 'text', // Makes this setting a text field
-				'default': 'Remote, CW, Agents, eSupport, Global, All, FIQ, GCH, Japan, Korea, LA, NA, OCE, SA, SEA, Invalid, 1.' // Default value if user doesn't change it
+				'default': 'Remote, CW, Agents, eSupport, Global, All, FIQ, GCH, Japan, Korea, LA, NA, OCE, SA, SEA, Invalid' // Default value if user doesn't change it
 			}
 		}
 	});

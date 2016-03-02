@@ -7,7 +7,7 @@
 // @include     /^http(s)?:\/\/(esko\.my\.salesforce\.com)\/([0-9A-Z]+\?)(.*)$/
 // @require     http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js
 // @require     http://ajax.googleapis.com/ajax/libs/jqueryui/1.11.1/jquery-ui.min.js
-// @version     14
+// @version     15
 // @icon        data:image/gif;base64,R0lGODlhIAAgAKIHAAGd3K/CNOz4/aje8zGv3HLJ63PAsv///yH5BAEAAAcALAAAAAAgACAAQAPGeLrc/k4MQKu9lIxRyhaCIhBVYAZGdgZYCwwMKLmFLEOPDeL8MgKEFXBFclkIoMJxRTRmaqGedEqtigSFYmYgGRAInV3vlzGsDFonoCZSAlAAQyqeKrDUFK7FHCDJh3B4bBJueBYeNmOEX4hRVo+QkZKTV4SNBzpiUlguXxcamRFphhhgmgIVQSZyJ6NGgz98Jl9npFwTFLOlJqQ1FkIqJ4ZIZIAEfGi6amyYacdnrk8dXI6YXVlGX4yam9hHXJTWOuHk5RAJADs=
 // @grant       GM_addStyle
 // ==/UserScript==
@@ -89,8 +89,13 @@ document.addEventListener('DOMNodeInserted', function () {
 		}
 
 		if (hourStyle == 'PM') {
+			if (dateOpenData[4] != 12) {
 			// PM => hours + 12 & switch month & day
 			dateOpenObj  = new Date(dateOpenData[3],dateOpenData[1]-1,dateOpenData[2],dateOpenData[4]+12,dateOpenData[5]);
+			} else {
+			// 12PM => switch month & day
+			dateOpenObj  = new Date(dateOpenData[3],dateOpenData[1]-1,dateOpenData[2],dateOpenData[4],dateOpenData[5]);
+			}
 		} else if (hourStyle == 'AM') {
 			// AM => switch month & day
 			dateOpenObj  = new Date(dateOpenData[3],dateOpenData[1]-1,dateOpenData[2],dateOpenData[4],dateOpenData[5]);

@@ -7,7 +7,7 @@
 // @include     /^http(s)?:\/\/(esko\.my\.salesforce\.com)\/([0-9A-Z]+\?)(.*)$/
 // @require     http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js
 // @require     http://ajax.googleapis.com/ajax/libs/jqueryui/1.11.1/jquery-ui.min.js
-// @version     11
+// @version     13
 // @icon        data:image/gif;base64,R0lGODlhIAAgAKIHAAGd3K/CNOz4/aje8zGv3HLJ63PAsv///yH5BAEAAAcALAAAAAAgACAAQAPGeLrc/k4MQKu9lIxRyhaCIhBVYAZGdgZYCwwMKLmFLEOPDeL8MgKEFXBFclkIoMJxRTRmaqGedEqtigSFYmYgGRAInV3vlzGsDFonoCZSAlAAQyqeKrDUFK7FHCDJh3B4bBJueBYeNmOEX4hRVo+QkZKTV4SNBzpiUlguXxcamRFphhhgmgIVQSZyJ6NGgz98Jl9npFwTFLOlJqQ1FkIqJ4ZIZIAEfGi6amyYacdnrk8dXI6YXVlGX4yam9hHXJTWOuHk5RAJADs=
 // @grant       GM_addStyle
 // ==/UserScript==
@@ -77,13 +77,14 @@ document.addEventListener('DOMNodeInserted', function () {
 
 		// now let's make a proper date object from what our regex extracted
 		var dateOpenObj;
+
 		// new check for US style dates
-		if (dateOpenData[6] == 'PM') {
+		if (dateOpenData[6].trim() == 'PM') {
 			// PM => hours + 12 & switch month & day
-			dateOpenObj  = new Date(dateOpenData[2]-1,dateOpenData[3],dateOpenData[1],dateOpenData[4]+12,dateOpenData[5]);
-		} else if (dateOpenData[6] == 'AM') {
+			dateOpenObj  = new Date(dateOpenData[3],dateOpenData[1]-1,dateOpenData[2],dateOpenData[4]+12,dateOpenData[5]);
+		} else if (dateOpenData[6].trim() == 'AM') {
 			// AM => switch month & day
-			dateOpenObj  = new Date(dateOpenData[2]-1,dateOpenData[3],dateOpenData[1],dateOpenData[4],dateOpenData[5]);
+			dateOpenObj  = new Date(dateOpenData[3],dateOpenData[1]-1,dateOpenData[2],dateOpenData[4],dateOpenData[5]);
 		} else {
 			// European-style date => let's use it like this
 			dateOpenObj  = new Date(dateOpenData[3],dateOpenData[2]-1,dateOpenData[1],dateOpenData[4],dateOpenData[5]);
@@ -101,6 +102,7 @@ document.addEventListener('DOMNodeInserted', function () {
 			} else {
 				toolTip = 'This log has been opened for ' + dateDifference + ' minutes, ' + Math.round(dateDifference-60) + ' minutes late!';
 			}
+
 			jQuery(this).attr('title', toolTip);
 			if (usejQueryUI) {
 				jQuery(this).tooltip({show:{effect:'fade'}, hide:{effect:'fade'}, track:true});

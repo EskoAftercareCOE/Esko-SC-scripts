@@ -7,7 +7,7 @@
 // @require     http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js
 // @require     https://openuserjs.org/src/libs/sizzle/GM_config.js
 // @require     https://gist.github.com/raw/2625891/waitForKeyElements.js
-// @version     4
+// @version     5
 // @icon        data:image/gif;base64,R0lGODlhIAAgAKIHAAGd3K/CNOz4/aje8zGv3HLJ63PAsv///yH5BAEAAAcALAAAAAAgACAAQAPGeLrc/k4MQKu9lIxRyhaCIhBVYAZGdgZYCwwMKLmFLEOPDeL8MgKEFXBFclkIoMJxRTRmaqGedEqtigSFYmYgGRAInV3vlzGsDFonoCZSAlAAQyqeKrDUFK7FHCDJh3B4bBJueBYeNmOEX4hRVo+QkZKTV4SNBzpiUlguXxcamRFphhhgmgIVQSZyJ6NGgz98Jl9npFwTFLOlJqQ1FkIqJ4ZIZIAEfGi6amyYacdnrk8dXI6YXVlGX4yam9hHXJTWOuHk5RAJADs=
 // @grant       GM_getValue
 // @grant       GM_setValue
@@ -26,7 +26,7 @@ GM_config.init(
 			{
 				'label': 'Hide the following items (comma-separated)', // Appears next to field
 				'type': 'textarea', // Makes this setting a text field
-				'default': '1. My Active Cases, 24/5 open cases, All Cases under investigation by R&D, All Closed Cases, All Open Cases, CS: Customer Support Agents, CS: Customer Support Agents EMEA, CS: Customer Support Agents GCH, CS: Customer Support Agents Japan, CS: Customer Support Agents Korea, CS: Customer Support Agents LA, CS: Customer Support Agents NA, CS: Customer Support Agents OCE, CS: Customer Support Agents SA, CS: Customer Support Agents SEA, CS: eSupport Engineers, CS: FIQ NA Engineers, CS: Global Support, CS: Remote Upgraders, CS: Solutions Support Engineers EMEA, CS: Support Engineers, CS: Support Engineers EMEA, CS: Support Engineers GCH, CS: Support Engineers Japan, CS: Support Engineers Korea, CS: Support Engineers LA, CS: Support Engineers NA, CS: Support Engineers OCE, CS: Support Engineers SA, CS: Support Engineers SEA, CW cases sent to R&D without Jira number, Invalid, My Cases, My Cases R&amp;D close comments, My Responsible Cases_Template, Recently Viewed Cases' // Default value if user doesn't change it
+				'default': '1. My Active Cases, 24/5 open cases, All Cases under investigation by R&D, All Closed Cases, All Open Cases, CS: Customer Support Agents, CS: Customer Support Agents EMEA, CS: Customer Support Agents GCH, CS: Customer Support Agents Japan, CS: Customer Support Agents Korea, CS: Customer Support Agents LA, CS: Customer Support Agents NA, CS: Customer Support Agents OCE, CS: Customer Support Agents SA, CS: Customer Support Agents SEA, CS: eSupport Engineers, CS: FIQ NA Engineers, CS: Global Support, CS: Remote Upgraders, CS: Solutions Support Engineers EMEA, CS: Support Engineers, CS: Support Engineers EMEA, CS: Support Engineers GCH, CS: Support Engineers Japan, CS: Support Engineers Korea, CS: Support Engineers LA, CS: Support Engineers NA, CS: Support Engineers OCE, CS: Support Engineers SA, CS: Support Engineers SEA, CW cases sent to R&D without Jira number, Invalid, My Cases, My Cases R&D close comments, Cases not sent to R&D, My Responsible Cases_Template, Recently Viewed Cases' // Default value if user doesn't change it
 			}
 		},
 		  'css': 'textarea { width: 100% !important; height: 65% !important; outline: none; overflow: auto; resize: none;}' 

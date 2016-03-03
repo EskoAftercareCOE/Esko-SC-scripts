@@ -3,6 +3,7 @@
 // @author      bevi@esko.com
 // @namespace   com.esko.bevi.scviewdrop
 // @description Cleans the view selection dropdown
+// @downloadURL https://github.com/tuxfre/esko-SC-scripts/raw/master/ServiceCloud%20Clean%20View%20Dropdown.user.js
 // @include     /^http(s)?:\/\/(esko\.my\.salesforce\.com)\/([0-9A-Z]+\?)(.*)$/
 // @require     http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js
 // @require     https://openuserjs.org/src/libs/sizzle/GM_config.js

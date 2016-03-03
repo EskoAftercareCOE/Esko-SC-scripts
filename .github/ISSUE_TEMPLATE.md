@@ -1,8 +1,8 @@
-#Issue template
+# Esko SC Script issue
 
 ## Affected script
-### Name
-### Version
+### Name:
+### Version:
 
 
 ## OS
@@ -17,4 +17,6 @@
 
 ## Short summary if your issue:
 ## Steps to reproduce the issue:
-## Other details
+## Other details:
+
+Don't hesitate to include details and screenshots.

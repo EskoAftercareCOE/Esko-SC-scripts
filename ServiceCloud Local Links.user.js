@@ -8,7 +8,7 @@
 // @require     http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js
 // @require     https://openuserjs.org/src/libs/sizzle/GM_config.js
 // @require     https://gist.github.com/raw/2625891/waitForKeyElements.js
-// @version     6
+// @version     7
 // @icon        data:image/gif;base64,R0lGODlhIAAgAKIHAAGd3K/CNOz4/aje8zGv3HLJ63PAsv///yH5BAEAAAcALAAAAAAgACAAQAPGeLrc/k4MQKu9lIxRyhaCIhBVYAZGdgZYCwwMKLmFLEOPDeL8MgKEFXBFclkIoMJxRTRmaqGedEqtigSFYmYgGRAInV3vlzGsDFonoCZSAlAAQyqeKrDUFK7FHCDJh3B4bBJueBYeNmOEX4hRVo+QkZKTV4SNBzpiUlguXxcamRFphhhgmgIVQSZyJ6NGgz98Jl9npFwTFLOlJqQ1FkIqJ4ZIZIAEfGi6amyYacdnrk8dXI6YXVlGX4yam9hHXJTWOuHk5RAJADs=
 // @grant       GM_getValue
 // @grant       GM_setValue
@@ -23,10 +23,9 @@ waitForKeyElements ("a[title='Job Folder Mac']", links);
 
 function links() {
 	jQuery("a[title^='Job Folder']").parent().css( "background-color", "rgba(255,255,0,0.5)" );
+	jQuery("a[title^='Job Folder']").prepend('<img src="'+ folderIcon +'" style="margin-right: 0.5em; height: 1em; width: 1em; vertical-align: baseline;">');
 	var caseID = jQuery(document).find("title").text().match(/^Case: ([0-9]{8}).*$/);
 	var jobFolderBasePath = 'esko-graphics.com/globalstorage/CC-SW-Problemlog-Gent/' + caseID[1].slice(0, -3) + '000-' + caseID[1].slice(0, -3) + '999/' + caseID[1] + '/';
 	jQuery("a[title='Job Folder Windows']").attr('href', 'file://///' + jobFolderBasePath);
-	jQuery("a[title='Job Folder Windows']").prepend('<img src="'+ folderIcon +'" style="margin-right: 0.5em; height: 1em; width: 1em; vertical-align: baseline;">');
 	jQuery("a[title='Job Folder Mac']").attr('href', 'smb://' + jobFolderBasePath);
-	jQuery("a[title='Job Folder Mac']").prepend('<img src="'+ folderIcon +'" style="margin-right: 0.5em; height: 1em; width: 1em; vertical-align: baseline;">');
 }

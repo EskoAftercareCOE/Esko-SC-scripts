@@ -7,7 +7,7 @@
 // @include     https://esko.my.salesforce.com/support/console/highlightpanel.apexp*
 // @require     http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js
 // @require     https://openuserjs.org/src/libs/sizzle/GM_config.js
-// @version     3
+// @version     4
 // @icon        data:image/gif;base64,R0lGODlhIAAgAKIHAAGd3K/CNOz4/aje8zGv3HLJ63PAsv///yH5BAEAAAcALAAAAAAgACAAQAPGeLrc/k4MQKu9lIxRyhaCIhBVYAZGdgZYCwwMKLmFLEOPDeL8MgKEFXBFclkIoMJxRTRmaqGedEqtigSFYmYgGRAInV3vlzGsDFonoCZSAlAAQyqeKrDUFK7FHCDJh3B4bBJueBYeNmOEX4hRVo+QkZKTV4SNBzpiUlguXxcamRFphhhgmgIVQSZyJ6NGgz98Jl9npFwTFLOlJqQ1FkIqJ4ZIZIAEfGi6amyYacdnrk8dXI6YXVlGX4yam9hHXJTWOuHk5RAJADs=
 // @grant       GM_getValue
 // @grant       GM_setValue
@@ -74,8 +74,6 @@ var statusLed;
 var teleScopeIcon='';
 var difference;
 var teleScopeURL = 'http://' + baseUrl + jQuery('.efhpFieldValue').last().text().trim() + '/systeminfo/html/Most_Recent.html';
-
-alert(teleScopeURL);
 
 if (DisplayIcon === 'Yes') {
 	teleScopeIcon = "&nbsp;|&nbsp;<img id=\"teleScopeIcon\" src=\"data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAQAAABKfvVzAAAAAmJLR0QAAKqNIzIAAAAJcEhZcwAAZToAAGU6Af2/hp8AAAGgSURBVDjLjdNNS5RRGIfx34wT0kiRkUpUFL1AQYYbEQmxxLJhGGfRIigI2rRq28pv0C5a+xFKTCyjrEAyaJHMQplaRPaGRWHJWA7MPE+badKZccZzNofr/K/nue/DOWxtXPdFaM7extGd+t3yXiiUczFSJ9rshCFJXXaU2b1YzWiTgwak9Nrj3ycDEcuaKv8Q0a7XsLMOaCqxokXT5rV4bKG62ow1YWkGloy55lBZxojTIGXGSjka+uW5m05p3lhCTNJRBQmXHSuxvKwp92Ws1mrwrlXLQoFAwTuj0tq06NNVKx7TLi7ilQfyvpv2QdEuo9LGXFWoVq64Y0jrBnZOTuij47XPPFrFbpcav9H4IsA+CyVhSnwrwiV/LFrzyQ89lZvV5cSkrXiiYNJ2icbCEWfMytrmpTeSdjcSBnUYlxO15KFO3fWFuGGfPRNFYFJRqr5wUo+nFkURNee18/bXExLixkvriN8mHNa3udAq6a3ZdeSRn9JimwndOk35uo5kvdBfvsdVQkpgYgPJG9dmsLbQYcC8TEVXM7658P8Z/QUVsHptDpVaBgAAACV0RVh0ZGF0ZTpjcmVhdGUAMjAxNC0xMC0yMlQyMzoyNTo1OS0wNDowMHaBpzYAAAAldEVYdGRhdGU6bW9kaWZ5ADIwMTQtMTAtMjJUMjM6MjU6NTktMDQ6MDAH3B+KAAAAGXRFWHRTb2Z0d2FyZQB3d3cuaW5rc2NhcGUub3Jnm+48GgAAAABJRU5ErkJggg==\" height=\"20\" width=\"20\" boder=\"0\">";

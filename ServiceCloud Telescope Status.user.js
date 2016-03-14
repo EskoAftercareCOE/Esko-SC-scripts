@@ -7,7 +7,7 @@
 // @include     https://esko.my.salesforce.com/support/console/highlightpanel.apexp*
 // @require     http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js
 // @require     https://openuserjs.org/src/libs/sizzle/GM_config.js
-// @version     4
+// @version     5
 // @icon        data:image/gif;base64,R0lGODlhIAAgAKIHAAGd3K/CNOz4/aje8zGv3HLJ63PAsv///yH5BAEAAAcALAAAAAAgACAAQAPGeLrc/k4MQKu9lIxRyhaCIhBVYAZGdgZYCwwMKLmFLEOPDeL8MgKEFXBFclkIoMJxRTRmaqGedEqtigSFYmYgGRAInV3vlzGsDFonoCZSAlAAQyqeKrDUFK7FHCDJh3B4bBJueBYeNmOEX4hRVo+QkZKTV4SNBzpiUlguXxcamRFphhhgmgIVQSZyJ6NGgz98Jl9npFwTFLOlJqQ1FkIqJ4ZIZIAEfGi6amyYacdnrk8dXI6YXVlGX4yam9hHXJTWOuHk5RAJADs=
 // @grant       GM_getValue
 // @grant       GM_setValue
@@ -27,8 +27,8 @@ GM_config.init(
 			{
 				'label': 'Use the following TeleScope Server', // Appears next to field
 				'type': 'select', // Makes this setting a dropdown
-				'options': ['Europe (Gent)', 'North America (Vandalia)', 'Asia (Singapore)'], // Possible choices
-				'default': 'Europe (Gent)' // Default value if user doesn't change it
+				'options': ['EMEA (Gent)', 'NALA (Vandalia)', 'APAC (Singapore)'], // Possible choices
+				'default': 'EMEA (Gent)' // Default value if user doesn't change it
 			},
 			'AlertInterval': // This is the id of the field
 			{
@@ -59,14 +59,14 @@ var DisplayIcon = GM_config.get('DisplayIcon');
 var baseUrl;
 
 switch (Server) {
-	case 'North America (Vandalia)':
+	case 'NALA (Vandalia)':
 		baseUrl = 'egwusms003.esko-graphics.com/CS-Customers-SystemInfo-Vandalia/';
 		break;
-	case 'Asia (Singapore)':
+	case 'APAC (Singapore)':
 		baseUrl = 'egwsims003.esko-graphics.com/CS-Customers-SystemInfo-Singapore/';
 		break;
 	default:
-		// equivalent to Europe (Gent)
+		// equivalent to EMEA (Gent)
 		baseUrl = 'begesesgf001.esko-graphics.com/CS-Customers-SystemInfo-Gent/';
 }
 

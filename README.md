@@ -25,4 +25,4 @@ Please use the [Issue tracker](https://github.com/tuxfre/esko-SC-scripts/issues/
   
   
   
-This is a secret _ninja_ project brought to you by bevi@esko.com
+This is a secret _ninja_ project brought to you by bevi[at]esko.com

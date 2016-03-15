@@ -7,7 +7,7 @@
 // @include     /^http(s)?:\/\/(esko\.my\.salesforce\.com)\/([0-9A-Z]+\?)(.*)$/
 // @require     http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js
 // @require     http://ajax.googleapis.com/ajax/libs/jqueryui/1.11.1/jquery-ui.min.js
-// @version     17
+// @version     18
 // @icon        data:image/gif;base64,R0lGODlhIAAgAKIHAAGd3K/CNOz4/aje8zGv3HLJ63PAsv///yH5BAEAAAcALAAAAAAgACAAQAPGeLrc/k4MQKu9lIxRyhaCIhBVYAZGdgZYCwwMKLmFLEOPDeL8MgKEFXBFclkIoMJxRTRmaqGedEqtigSFYmYgGRAInV3vlzGsDFonoCZSAlAAQyqeKrDUFK7FHCDJh3B4bBJueBYeNmOEX4hRVo+QkZKTV4SNBzpiUlguXxcamRFphhhgmgIVQSZyJ6NGgz98Jl9npFwTFLOlJqQ1FkIqJ4ZIZIAEfGi6amyYacdnrk8dXI6YXVlGX4yam9hHXJTWOuHk5RAJADs=
 // @grant       GM_addStyle
 // ==/UserScript==
@@ -79,31 +79,65 @@ document.addEventListener('DOMNodeInserted', function () {
 			jQuery(this).css('background-color', '');
 
 			// let's fetch and store this log's creation date (regex powaaaa)
-			var dateOpenData = /^([0-9]{1,2})\/([0-9]{1,2})\/([0-9]{4}) ([0-9]{1,2}):([0-9]{2})\s?(PM|AM)?$/g.exec(jQuery(this).find('.x-grid3-td-CASES_CREATED_DATE').text());
+			var re = /(^([0-9]{4})-([0-9]|1[0-2])-([0-9]|[1-2][0-9]|3[0-1])\s(AM|PM)([0-9]|1[0-2]):([0-5][0-9])$)|(^([0-9]{4})\/(0[0-9]|1[0-2])\/(0[0-9]|[1-2][0-9]|3[0-1])\s(0[0-9]|[1][0-9]|2[0-4]):([0-5][0-9])$)|(^([0-9]|1[0-2])\/([0-9]|[1-2][0-9]|3[0-1])\/([0-9]{4})\s([0-9]|1[0-2]):([0-5][0-9])\s(PM|AM)$)|(^(0[0-9]|[1-2][0-9]|3[0-1])[.\/\-](0[0-9]|1[0-2])[.\/\-]([0-9]{4})\s(0[0-9]|1[0-9]|2[0-3]):([0-5][0-9])$)|(^(0[0-9]|[1-2][0-9]|3[0-1])\/(0[0-9]|1[0-2])\/([0-9]{4})\s([0-9]|1[0-2]):([0-5][0-9])\s(PM|AM)$)/g; 
+			var dateString = jQuery(this).find('.x-grid3-td-CASES_CREATED_DATE').text();
+			var dateOpenData = re.exec(dateString);
 
-			// now let's make a proper date object from what our regex extracted
-			var dateOpenObj;
-
-			// let's account for US format
-			var year, month, day, hour, minute, second;
+			// let's account for various date formats
+			var year, month, day, hour, minute;
 			if (dateOpenData) {
-				if (typeof dateOpenData[6] === 'undefined' || dateOpenData[6] === null) {
-					month = +dateOpenData[2];
-					day = +dateOpenData[1];
+				// let's test the kind of date we captured
+				if (typeof dateOpenData[1] !== 'undefined') {
+					// dateOpenData[1] is defined => CN date
+					year=   +dateOpenData[2];
+					month=  +dateOpenData[4];
+					day=    +dateOpenData[3];
+					hour=   +dateOpenData[6];
+					minute= +dateOpenData[7];
+					if (dateOpenData[5] === 'PM' && hour !== 12) {
+						hour += 12;
+					}
+				} else if (typeof dateOpenData[8] !== 'undefined') {
+					// dateOpenData[8] is defined => JP date
+					year=   +dateOpenData[9];
+					month=  +dateOpenData[10];
+					day=    +dateOpenData[11];
+					hour=   +dateOpenData[12];
+					minute= +dateOpenData[13];
+				} else if (typeof dateOpenData[14] !== 'undefined') {
+					// dateOpenData[14] is defined => US date
+					year=   +dateOpenData[17];
+					month=  +dateOpenData[15];
+					day=    +dateOpenData[16];
+					hour=   +dateOpenData[18];
+					minute= +dateOpenData[19];
+					if (dateOpenData[20] === 'PM' && hour !== 12) {
+						hour += 12;
+					}
+				} else if (typeof dateOpenData[21] !== 'undefined') {
+					// dateOpenData[21] is defined => NL, SG, UK, FR IT, BR, ES, DE, PT date
+					year=   +dateOpenData[24];
+					month=  +dateOpenData[23];
+					day=    +dateOpenData[22];
+					hour=   +dateOpenData[25];
+					minute= +dateOpenData[26];
+				} else if (typeof dateOpenData[27] !== 'undefined') {
+					// dateOpenData[8] is defined => AU, IN, MX date
+					year=   +dateOpenData[30];
+					month=  +dateOpenData[29];
+					day=    +dateOpenData[28];
+					hour=   +dateOpenData[31];
+					minute= +dateOpenData[32];
+					if (dateOpenData[33] === 'PM' && hour !== 12) {
+						hour += 12;
+					}
 				} else {
-					month = +dateOpenData[1];
-					day = +dateOpenData[2];
-				}
-				year = +dateOpenData[3];
-				hour = +dateOpenData[4];
-				minute = +dateOpenData[5];
-				if (dateOpenData[6] === 'PM' && hour !== 12) {
-					hour += 12;
+					throw new Error('Unrecognized date format!');
 				}
 			}
 
 			// Let's make this a date
-			dateOpenObj  = new Date(year,month-1,day,hour,minute);
+			var dateOpenObj  = new Date(year,month-1,day,hour,minute);
 
 			// and now let's get how many minutes have elapsed since the log was opened
 			var dateDifference = Math.round((dateNow-dateOpenObj)/(1000*60));

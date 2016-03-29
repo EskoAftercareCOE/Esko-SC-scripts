@@ -1,5 +1,5 @@
 // ==UserScript==
-// @name        ServiceCloud Telescope Status
+// @name        [BETA] ServiceCloud Telescope Status
 // @author      bevi@esko.com
 // @namespace   com.esko.bevi.sctelescope
 // @description Queries Telescope for latest update
@@ -9,7 +9,7 @@
 // @require     https://openuserjs.org/src/libs/sizzle/GM_config.js
 // @require     https://raw.githubusercontent.com/gilbitron/Dropit/master/dropit.js
 // @resource    dropitCSS https://raw.githubusercontent.com/tuxfre/esko-SC-scripts/master/.resources/dropit.css
-// @version     6
+// @version     6b
 // @icon        data:image/gif;base64,R0lGODlhIAAgAKIHAAGd3K/CNOz4/aje8zGv3HLJ63PAsv///yH5BAEAAAcALAAAAAAgACAAQAPGeLrc/k4MQKu9lIxRyhaCIhBVYAZGdgZYCwwMKLmFLEOPDeL8MgKEFXBFclkIoMJxRTRmaqGedEqtigSFYmYgGRAInV3vlzGsDFonoCZSAlAAQyqeKrDUFK7FHCDJh3B4bBJueBYeNmOEX4hRVo+QkZKTV4SNBzpiUlguXxcamRFphhhgmgIVQSZyJ6NGgz98Jl9npFwTFLOlJqQ1FkIqJ4ZIZIAEfGi6amyYacdnrk8dXI6YXVlGX4yam9hHXJTWOuHk5RAJADs=
 // @grant       GM_getValue
 // @grant       GM_setValue

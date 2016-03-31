@@ -9,7 +9,7 @@
 // @require     https://openuserjs.org/src/libs/sizzle/GM_config.js
 // @require     https://raw.githubusercontent.com/gilbitron/Dropit/master/dropit.js
 // @resource    dropitCSS https://raw.githubusercontent.com/tuxfre/esko-SC-scripts/master/.resources/dropit.css
-// @version     7b
+// @version     8b
 // @icon        data:image/gif;base64,R0lGODlhIAAgAKIHAAGd3K/CNOz4/aje8zGv3HLJ63PAsv///yH5BAEAAAcALAAAAAAgACAAQAPGeLrc/k4MQKu9lIxRyhaCIhBVYAZGdgZYCwwMKLmFLEOPDeL8MgKEFXBFclkIoMJxRTRmaqGedEqtigSFYmYgGRAInV3vlzGsDFonoCZSAlAAQyqeKrDUFK7FHCDJh3B4bBJueBYeNmOEX4hRVo+QkZKTV4SNBzpiUlguXxcamRFphhhgmgIVQSZyJ6NGgz98Jl9npFwTFLOlJqQ1FkIqJ4ZIZIAEfGi6amyYacdnrk8dXI6YXVlGX4yam9hHXJTWOuHk5RAJADs=
 // @grant       GM_getValue
 // @grant       GM_setValue
@@ -39,7 +39,7 @@ GM_config.init(
 			{
 				'label': 'Licensing view', // Appears next to field
 				'type': 'select', // Makes this setting a dropdown
-				'options': ['License overview', 'Activation licenses', 'Certificate licenses (dongles)', 'All licenses', 'Forced deactivations'], // Possible choices
+				'options': ['License overview', 'Activated licenses', 'Certificate licenses (dongles)', 'Forced deactivations'], // Possible choices
 				'default': 'License overview' // Default value if user doesn't change it
 			},
 
@@ -90,14 +90,11 @@ switch (Server) {
 }
 
 switch (License) {
-	case 'Activation licenses':
+	case 'Activated licenses':
 		licBaseUrl = 'http://licmgmt.esko.com/Activation/LicenseOverview.aspx?type=ACT&Cuscode=';
 		break;
 	case 'Certificate licenses (dongles)':
 		licBaseUrl = 'http://licmgmt.esko.com/Activation/LicenseOverview.aspx?type=CERT&Cuscode=';
-		break;
-	case 'All licenses':
-		licBaseUrl = 'http://licmgmt.esko.com/Activation/LicenseOverview.aspx?Cuscode=';
 		break;
 	case 'Forced deactivations':
 		licBaseUrl = 'http://licmgmt.esko.com/Activation/ReinstallOverview.aspx?cuscode=';

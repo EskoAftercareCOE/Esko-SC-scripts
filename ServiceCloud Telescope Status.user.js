@@ -111,7 +111,7 @@ var cuscode = jQuery('.efhpFieldValue').last().text().trim();
 
 var teleScopeURL = 'http://' + teleBaseUrl + cuscode + '/systeminfo/html/Most_Recent.html';
 
-var dropDownMenu = '<ul class="menu">\n\t<li>\n\t\t<a href="#" id="cusCode">'+cuscode+'</a>\n\t\t<ul>\n\t\t\t<li><a href="'+teleScopeURL+'" target="_blank">Latest Telescope report</a></li>\n\t\t\t<li><a href="http://tbp.esko.com/?companycode='+cuscode+'" target="_blank">The Big Picture</a></li>\n\t\t\t<li><a href="'+licBaseUrl+cuscode+'" target="_blank">License overview</a></li>\n\t\t</ul>\n\t</li>\n</ul>';
+var dropDownMenu = '<ul class="menu">\n\t<li>\n\t\t<a href="#" id="cusCode">'+cuscode+'</a>\n\t\t<ul>\n\t\t\t<li><a href="'+teleScopeURL+'" target="_blank">Latest Telescope report</a></li>\n\t\t\t<li><a href="http://tbp.esko.com/?companycode='+cuscode+'" target="_blank">The Big Picture</a></li>\n\t\t\t<li><a href="'+licBaseUrl+cuscode+'" target="_blank">'+ License +'</a></li>\n\t\t</ul>\n\t</li>\n</ul>';
 jQuery('.efhpFieldValue').last().html(dropDownMenu);
 jQuery('.menu').dropit();
 jQuery('.efhpRow').css('overflow', 'visible');

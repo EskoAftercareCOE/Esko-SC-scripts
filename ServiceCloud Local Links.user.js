@@ -35,7 +35,7 @@ GM_config.init(
 	});
 
 var Server = GM_config.get('Server');
-var jobFolderRoot = "error";
+var jobFolderRoot;
 
 switch (Server) {
 	case 'NALA':

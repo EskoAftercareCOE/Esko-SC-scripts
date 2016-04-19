@@ -6,7 +6,7 @@
 // @downloadURL https://github.com/tuxfre/esko-SC-scripts/raw/master/ServiceCloud%20Telescope%20Status.user.js
 // @include     https://esko.my.salesforce.com/support/console/highlightpanel.apexp*
 // @require     http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js
-// @require     https://openuserjs.org/src/libs/sizzle/GM_config.js
+// @require     https://raw.githubusercontent.com/sizzlemctwizzle/GM_config/master/gm_config.js
 // @require     https://raw.githubusercontent.com/gilbitron/Dropit/master/dropit.js
 // @resource    dropitCSS https://raw.githubusercontent.com/tuxfre/esko-SC-scripts/master/.resources/dropit.css
 // @version     10

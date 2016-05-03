@@ -7,7 +7,7 @@
 // @include     /^http(s)?:\/\/(esko\.my\.salesforce\.com)\/([0-9A-Z]+\?)(.*)$/
 // @require     http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js
 // @require     http://ajax.googleapis.com/ajax/libs/jqueryui/1.11.1/jquery-ui.min.js
-// @version     19
+// @version     20
 // @icon        data:image/gif;base64,R0lGODlhIAAgAKIHAAGd3K/CNOz4/aje8zGv3HLJ63PAsv///yH5BAEAAAcALAAAAAAgACAAQAPGeLrc/k4MQKu9lIxRyhaCIhBVYAZGdgZYCwwMKLmFLEOPDeL8MgKEFXBFclkIoMJxRTRmaqGedEqtigSFYmYgGRAInV3vlzGsDFonoCZSAlAAQyqeKrDUFK7FHCDJh3B4bBJueBYeNmOEX4hRVo+QkZKTV4SNBzpiUlguXxcamRFphhhgmgIVQSZyJ6NGgz98Jl9npFwTFLOlJqQ1FkIqJ4ZIZIAEfGi6amyYacdnrk8dXI6YXVlGX4yam9hHXJTWOuHk5RAJADs=
 // @grant       GM_addStyle
 // ==/UserScript==
@@ -79,7 +79,7 @@ document.addEventListener('DOMNodeInserted', function () {
 			jQuery(this).css('background-color', '');
 
 			// let's fetch and store this log's creation date (regex powaaaa)
-			var re = /(^([0-9]{4})-([0-9]|1[0-2])-([0-9]|[1-2][0-9]|3[0-1])\s(AM|PM)([0-9]|1[0-2]):([0-5][0-9])$)|(^([0-9]{4})\/(0[0-9]|1[0-2])\/(0[0-9]|[1-2][0-9]|3[0-1])\s(0[0-9]|[1][0-9]|2[0-4]):([0-5][0-9])$)|(^([0-9]|1[0-2])\/([0-9]|[1-2][0-9]|3[0-1])\/([0-9]{4})\s([0-9]|1[0-2]):([0-5][0-9])\s(PM|AM)$)|(^(0[0-9]|[1-2][0-9]|3[0-1])[.\/\-](0[0-9]|1[0-2])[.\/\-]([0-9]{4})\s(0?[0-9]|1[0-9]|2[0-3]):([0-5][0-9])$)|(^(0[0-9]|[1-2][0-9]|3[0-1])\/(0[0-9]|1[0-2])\/([0-9]{4})\s([0-9]|1[0-2]):([0-5][0-9])\s(PM|AM)$)/g; 
+			var re = /(^([0-9]{4})-([0-9]|1[0-2])-([0-9]|[1-2][0-9]|3[0-1])\s(AM|PM)([0-9]|1[0-2]):([0-5][0-9])$)|(^([0-9]{4})\/(0[0-9]|1[0-2])\/(0[0-9]|[1-2][0-9]|3[0-1])\s(0[0-9]|[1][0-9]|2[0-4]):([0-5][0-9])$)|(^([0-9]|1[0-2])\/([0-9]|[1-2][0-9]|3[0-1])\/([0-9]{4})\s([0-9]|1[0-2]):([0-5][0-9])\s(PM|AM)$)|(^(0?[0-9]|[1-2][0-9]|3[0-1])[.\/\-](0[0-9]|1[0-2])[.\/\-]([0-9]{4})\s(0?[0-9]|1[0-9]|2[0-3]):([0-5][0-9])$)|(^(0[0-9]|[1-2][0-9]|3[0-1])\/(0[0-9]|1[0-2])\/([0-9]{4})\s([0-9]|1[0-2]):([0-5][0-9])\s(PM|AM)$)/g; 
 			var dateString = jQuery(this).find('.x-grid3-td-CASES_CREATED_DATE').text();
 			var dateOpenData = re.exec(dateString);
 

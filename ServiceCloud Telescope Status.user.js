@@ -5,11 +5,12 @@
 // @description Queries Telescope for latest update
 // @downloadURL https://github.com/tuxfre/esko-SC-scripts/raw/master/ServiceCloud%20Telescope%20Status.user.js
 // @include     https://esko.my.salesforce.com/support/console/highlightpanel.apexp*
+// @include     https://esko--accept.cs83.my.salesforce.com/support/console/highlightpanel.apexp*
 // @require     http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js
 // @require     https://raw.githubusercontent.com/sizzlemctwizzle/GM_config/master/gm_config.js
 // @require     https://raw.githubusercontent.com/gilbitron/Dropit/master/dropit.js
 // @resource    dropitCSS https://raw.githubusercontent.com/tuxfre/esko-SC-scripts/master/.resources/dropit.css
-// @version     10
+// @version     11
 // @icon        data:image/gif;base64,R0lGODlhIAAgAKIHAAGd3K/CNOz4/aje8zGv3HLJ63PAsv///yH5BAEAAAcALAAAAAAgACAAQAPGeLrc/k4MQKu9lIxRyhaCIhBVYAZGdgZYCwwMKLmFLEOPDeL8MgKEFXBFclkIoMJxRTRmaqGedEqtigSFYmYgGRAInV3vlzGsDFonoCZSAlAAQyqeKrDUFK7FHCDJh3B4bBJueBYeNmOEX4hRVo+QkZKTV4SNBzpiUlguXxcamRFphhhgmgIVQSZyJ6NGgz98Jl9npFwTFLOlJqQ1FkIqJ4ZIZIAEfGi6amyYacdnrk8dXI6YXVlGX4yam9hHXJTWOuHk5RAJADs=
 // @grant       GM_getValue
 // @grant       GM_setValue

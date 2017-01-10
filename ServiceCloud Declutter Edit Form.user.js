@@ -25,8 +25,8 @@ var targets = {
 	'Sent to R&D' :                 ['#head_2_ep', '#head_3_ep', '#head_4_ep', '#head_5_ep', '#head_6_ep', '#head_8_ep', '#head_9_ep', '#head_10_ep', '#head_11_ep',],
 	'Sent to OEM' :                 ['#head_2_ep', '#head_3_ep', '#head_4_ep', '#head_5_ep', '#head_6_ep', '#head_8_ep', '#head_9_ep', '#head_10_ep', '#head_11_ep',],
 	'Intervention' :                ['#head_2_ep', '#head_3_ep', '#head_4_ep', '#head_5_ep', '#head_6_ep', '#head_7_ep', '#head_8_ep', '#head_9_ep', '#head_10_ep', '#head_11_ep'],
-	'Close to confirm' :            ['#head_2_ep', '#head_3_ep', '#head_4_ep', '#head_5_ep', '#head_6_ep', '#head_7_ep', '#head_8_ep', '#head_10_ep', '#head_11_ep'],
-	'Closed' :                      ['#head_2_ep', '#head_3_ep', '#head_4_ep', '#head_5_ep', '#head_6_ep', '#head_7_ep', '#head_8_ep', '#head_10_ep', '#head_11_ep']
+	'Close to confirm' :            ['#head_2_ep', '#head_3_ep', '#head_4_ep', '#head_5_ep', '#head_6_ep', '#head_7_ep', '#head_8_ep', '#head_11_ep'],
+	'Closed' :                      ['#head_2_ep', '#head_3_ep', '#head_4_ep', '#head_5_ep', '#head_6_ep', '#head_7_ep', '#head_8_ep', '#head_11_ep']
 };
 
 // Just in case, we check if the page is an edit page before starting the machine

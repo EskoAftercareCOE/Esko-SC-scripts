@@ -1,4 +1,4 @@
-![esko](https://www.esko.com/design/esko/img/logo-esko-new.png "Esko") Service Cloud scripts
+![esko](https://www.esko.com/Content/Images/logo-esko.png "Esko") Service Cloud scripts
 ====== 
 ## A few userscripts  to workaround ServiceCloud's annoyances in Esko's support environment ##
 

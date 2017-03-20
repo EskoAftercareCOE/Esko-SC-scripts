@@ -8,7 +8,7 @@
 // @include     /^http(s)?:\/\/(esko--accept\.cs83\.my\.salesforce\.com)\/([0-9A-Z]+\?)(.*)$/
 // @require     http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js
 // @require     http://ajax.googleapis.com/ajax/libs/jqueryui/1.11.1/jquery-ui.min.js
-// @version     21
+// @version     22
 // @icon        data:image/gif;base64,R0lGODlhIAAgAKIHAAGd3K/CNOz4/aje8zGv3HLJ63PAsv///yH5BAEAAAcALAAAAAAgACAAQAPGeLrc/k4MQKu9lIxRyhaCIhBVYAZGdgZYCwwMKLmFLEOPDeL8MgKEFXBFclkIoMJxRTRmaqGedEqtigSFYmYgGRAInV3vlzGsDFonoCZSAlAAQyqeKrDUFK7FHCDJh3B4bBJueBYeNmOEX4hRVo+QkZKTV4SNBzpiUlguXxcamRFphhhgmgIVQSZyJ6NGgz98Jl9npFwTFLOlJqQ1FkIqJ4ZIZIAEfGi6amyYacdnrk8dXI6YXVlGX4yam9hHXJTWOuHk5RAJADs=
 // @grant       GM_addStyle
 // ==/UserScript==
@@ -39,7 +39,9 @@ document.addEventListener('DOMNodeInserted', function () {
 	var dateNow = Date.now();
 
 	// extract the classes of the Action Required column
-	var actReqColClasses = jQuery('div[title="Action Required"]').attr('class').split(/\s+/);
+	var actReqColClassesObject = jQuery('div[title="Action Required"]').attr('class');
+	var actReqColClasses = typeof actReqColClassesObject !== 'undefined' ? actReqColClassesObject.split(/\s+/) : ({});
+
 	//loop through the classes
 	for (var i = 0; i < actReqColClasses.length; i++) {
 		//search for a class mathing our pattern
@@ -52,7 +54,9 @@ document.addEventListener('DOMNodeInserted', function () {
 	}
 
 	// extract the classes of the Contract Status column
-	var contStatusClasses = jQuery('div[title="Contract Status"]').attr('class').split(/\s+/);
+	var contStatusClassesObject = jQuery('div[title="Contract Status"]').attr('class');
+	var contStatusClasses = typeof contStatusClassesObject !== 'undefined' ? contStatusClassesObject.split(/\s+/) : ({});
+
 	// loop through the classes
 	for (var j = 0; j < contStatusClasses.length; i++) {
 		//search for a class mathing our pattern
@@ -212,3 +216,4 @@ document.addEventListener('DOMNodeInserted', function () {
 		}
 	});
 }, false);
+

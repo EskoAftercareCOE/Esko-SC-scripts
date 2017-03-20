@@ -9,12 +9,15 @@
 // @require     https://raw.githubusercontent.com/sizzlemctwizzle/GM_config/master/gm_config.js
 // @require     https://gist.githubusercontent.com/BrockA/2625891/raw/9c97aa67ff9c5d56be34a55ad6c18a314e5eb548/waitForKeyElements.js
 // @require     http://ajax.googleapis.com/ajax/libs/jqueryui/1.11.1/jquery-ui.min.js
-// @version     4
+// @version     5
 // @downloadURL https://github.com/tuxfre/esko-SC-scripts/raw/master/ServiceCloud%20Better%20Files%20Widget.user.js
 // @icon        data:image/gif;base64,R0lGODlhIAAgAKIHAAGd3K/CNOz4/aje8zGv3HLJ63PAsv///yH5BAEAAAcALAAAAAAgACAAQAPGeLrc/k4MQKu9lIxRyhaCIhBVYAZGdgZYCwwMKLmFLEOPDeL8MgKEFXBFclkIoMJxRTRmaqGedEqtigSFYmYgGRAInV3vlzGsDFonoCZSAlAAQyqeKrDUFK7FHCDJh3B4bBJueBYeNmOEX4hRVo+QkZKTV4SNBzpiUlguXxcamRFphhhgmgIVQSZyJ6NGgz98Jl9npFwTFLOlJqQ1FkIqJ4ZIZIAEfGi6amyYacdnrk8dXI6YXVlGX4yam9hHXJTWOuHk5RAJADs=
-// @grant       GM_getValue
-// @grant       GM_setValue
 // @grant       GM_log
+// @grant       GM_xmlhttpRequest
+// @grant       GM_getResourceText
+// @connect     esko.my.salesforce.com
+// @connect     *.force.com
+// @connect     self
 // ==/UserScript==
 
 // two arrays containing file extensions that we handle specifically for viewing
@@ -59,10 +62,17 @@ function init() {
 		var fileExtension = fileName.substr((~-fileName.lastIndexOf(".") >>> 0) + 2).toLowerCase();
 		// populating the direct url to the file
 		var directFileURL = $('a[onclick*="'+fileID+'"]:textEquals("Download")').attr("onclick").match(/entityFilesComponent\.performAction\(\'[^']+\', \'[^']+\', \'[^']+\', \'([^']+)\'/)[1];
-		// changing the link's href
+		// identifying the parent object of the menu items for each file
+		var fileMenuHolder = $('a[onclick*="'+fileID+'"]:textEquals("Download")').parents(":eq(1)");
+
+		// adding a delete link to the menu
+		fileMenuHolder.append('<div class="eWidgetMenuItem " style="display:block"><a href="javascript:void(0);" onclick="DeleteConfirm = window.open(\'/setup/own/deleteredirect.jsp?delID='+fileID+'\', \'DeleteConfirm\', \'menubar=no, status=no, scrollbars=no, menubar=no, width=600, height=500 left='+((screen.width-600)/2)+', top='+((screen.height-500)/2)+'\'); var timer = setInterval(function() { if(DeleteConfirm.closed) { clearInterval(timer); self.location.reload(true); } }, 1000);">Delete</a></div>');
+
+		// changing the file link's href
 		$this.attr("href", directFileURL);
-		// changing the link's target to open in new window/tab
+		// changing the file link's target to open in new window/tab
 		$this.attr('target','_blank');
+
 		// if the file is an image...
 		if ($.inArray(fileExtension, imageformats) !== -1) {
 			// we add a tooltip
@@ -74,19 +84,37 @@ function init() {
 				},
 				content: '<div><img src="'+directFileURL+'" style="width: 100%; height: 100%;" /></div>'
 			});
+
 		// if the file is text
 		} /*else if ($.inArray(fileExtension, textformats) !== -1) {
-			// create a text tooltip [not working because of SFDC]
-			$(this).tooltip({
-				position: {
-					my: "center top",
-					at: "center top+5%",
-					of: "div.centerContent"
-				},
-				content: '<div><iframe src="'+directFileURL+'" style="width: 100%; height: 100%;" /></div>'
-			});
-
-		}*/ /* SFDC forces the download regardless */
+			// create a text tooltip => still broken
+			try {
+				//https://esko.my.salesforce.com/servlet/servlet.FileDownload?file=00P5700001l7DFO
+				GM_xmlhttpRequest({
+					method: "GET",
+					url: directFileURL,
+					overrideMimeType: "text/plain",
+					fetch: true,
+					onload: function(response) {
+						alert("directFileURL:\t"+ directFileURL +"\nfinalUrl:\t" + response.finalUrl +"\n\n status:\t"+response.status+"\n statusText:\t"+response.statusText+"\n readyState:\t"+response.readyState+"\n responseHeaders:\t"+response.responseHeaders+"\n\n responseText:\t"+response.responseText);
+						try {
+							$this.tooltip({
+								position: {
+									my: "center top",
+									at: "center top+5%",
+									of: "div.centerContent"
+								},
+								content: '<div><pre>'+response.responseText+'</pre></div>'
+							});
+						} catch (e) {
+							console.log("Error while creating the tooltip"+e);
+						}
+					}
+				});
+			} catch (e) {
+				console.log("Error with GM_xmlhttpRequest "+e);
+			}
+		} */
 	});
 }
 

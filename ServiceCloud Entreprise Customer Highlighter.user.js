@@ -7,7 +7,7 @@
 // @require     http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js
 // @require     http://ajax.googleapis.com/ajax/libs/jqueryui/1.11.1/jquery-ui.min.js
 // @downloadURL https://github.com/tuxfre/esko-SC-scripts/raw/master/ServiceCloud%20Entreprise%20Customer%20Highlighter.user.js
-// @version     1
+// @version     2
 // @icon        data:image/gif;base64,R0lGODlhIAAgAKIHAAGd3K/CNOz4/aje8zGv3HLJ63PAsv///yH5BAEAAAcALAAAAAAgACAAQAPGeLrc/k4MQKu9lIxRyhaCIhBVYAZGdgZYCwwMKLmFLEOPDeL8MgKEFXBFclkIoMJxRTRmaqGedEqtigSFYmYgGRAInV3vlzGsDFonoCZSAlAAQyqeKrDUFK7FHCDJh3B4bBJueBYeNmOEX4hRVo+QkZKTV4SNBzpiUlguXxcamRFphhhgmgIVQSZyJ6NGgz98Jl9npFwTFLOlJqQ1FkIqJ4ZIZIAEfGi6amyYacdnrk8dXI6YXVlGX4yam9hHXJTWOuHk5RAJADs=
 // @grant       GM_addStyle
 // ==/UserScript==
@@ -46,7 +46,7 @@ document.addEventListener('DOMNodeInserted', function () {
 			jQuery(this).css({"border-color":"", "border-width":"", "border-style":""});
 
 			// if the Enterprise customer box is toggled
-			if (jQuery(this).find('.x-grid3-col-'+entCustColClass).children("img.checkImg").attr('src') != "/img/checkbox_unchecked.gif") {
+			if (jQuery(this).find('.x-grid3-col-'+entCustColClass).children("img.checkImg").attr('src') == "/img/checkbox_checked.gif") {
 				jQuery(this).css({"border-color":"orange", "border-width":"5px", "border-style":"solid", "animation": "blink .5s step-end infinite alternate", "-webkit-animation": "blink .5s step-end infinite alternate"});
 			}
 		}

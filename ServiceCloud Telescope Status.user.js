@@ -108,7 +108,7 @@ switch (License) {
 var statusLed;
 var teleScopeIcon='';
 var difference;
-var cuscode = jQuery('.efhpFieldValue').last().text().trim();
+var cuscode = jQuery('.efhpFieldValue').last().prev().text().trim();
 
 var teleScopeURL = 'http://' + teleBaseUrl + cuscode + '/systeminfo/html/Most_Recent.html';
 

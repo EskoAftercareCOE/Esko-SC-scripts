@@ -1,6 +1,6 @@
 // ==UserScript==
 // @name        ServiceCloud Declutter Edit form
-// @author      bevi@esko.com / updated by TD
+// @author      bevi@esko.com / updated by TD td@esko.com
 // @namespace   com.esko.bevi.scdeclutt.edit
 // @description Hide some panels from ServiceCloud's case editing form
 // @downloadURL https://github.com/tuxfre/esko-SC-scripts/raw/master/ServiceCloud%20Declutter%20Edit%20Form.user.js

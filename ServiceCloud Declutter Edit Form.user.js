@@ -1,5 +1,5 @@
 // ==UserScript==
-// @name        ServiceCloud Declutter Edit form
+// @name        ServiceCloud Declutter Edit form_test
 // @author      bevi@esko.com
 // @namespace   com.esko.bevi.scdeclutt.edit
 // @description Hide some panels from ServiceCloud's case editing form
@@ -17,16 +17,18 @@ this.$ = this.jQuery = jQuery.noConflict(true);
 
 var targets = {
 	'New' :                         ['#head_5_ep', '#head_6_ep', '#head_7_ep', '#head_8_ep', '#head_9_ep', '#head_10_ep', '#head_11_ep'],
-	'Working' :                     ['#head_2_ep', '#head_3_ep', '#head_4_ep', '#head_5_ep', '#head_6_ep', '#head_8_ep', '#head_9_ep', '#head_10_ep', '#head_11_ep'],
+	'Working' :                     ['#head_2_ep', '#head_3_ep', '#head_4_ep', '#head_5_ep', '#head_6_ep','#head_7_ep', '#head_8_ep', '#head_9_ep', '#head_10_ep', '#head_11_ep'],
 	'Pending Finance Approval' :    ['#head_2_ep', '#head_3_ep', '#head_4_ep', '#head_5_ep', '#head_6_ep', '#head_7_ep', '#head_8_ep', '#head_9_ep', '#head_10_ep', '#head_11_ep'],
 	'Pending Quotation' :           ['#head_2_ep', '#head_4_ep', '#head_5_ep', '#head_6_ep', '#head_7_ep', '#head_8_ep', '#head_9_ep', '#head_11_ep'],
-	'Waiting - Customer' :          ['#head_2_ep', '#head_3_ep', '#head_4_ep', '#head_5_ep', '#head_6_ep', '#head_7_ep', '#head_8_ep', '#head_9_ep', '#head_10_ep', '#head_11_ep'],
-	'Sent to License' :             ['#head_2_ep', '#head_3_ep', '#head_4_ep', '#head_5_ep', '#head_6_ep', '#head_7_ep', '#head_9_ep', '#head_10_ep', '#head_11_ep',],
-	'Sent to R&D' :                 ['#head_2_ep', '#head_3_ep', '#head_4_ep', '#head_5_ep', '#head_6_ep', '#head_8_ep', '#head_9_ep', '#head_10_ep', '#head_11_ep',],
+	'Waiting - Customer' :     	['#head_2_ep', '#head_3_ep', '#head_4_ep', '#head_5_ep', '#head_6_ep', '#head_7_ep', '#head_8_ep', '#head_9_ep', '#head_10_ep', '#head_11_ep'],
+	'Waiting - Return' :         	['#head_2_ep', '#head_3_ep', '#head_4_ep', '#head_5_ep', '#head_6_ep', '#head_7_ep', '#head_8_ep', '#head_9_ep', '#head_10_ep', '#head_11_ep'],
+     	'Waiting' :                     ['#head_2_ep', '#head_3_ep', '#head_4_ep', '#head_5_ep', '#head_6_ep', '#head_7_ep', '#head_8_ep', '#head_9_ep', '#head_10_ep', '#head_11_ep'],
+	'Sent to License' :             ['#head_2_ep', '#head_3_ep', '#head_4_ep', '#head_5_ep', '#head_6_ep', '#head_8_ep', '#head_9_ep', '#head_10_ep', '#head_11_ep',],
+	'Sent to R&D' :                 ['#head_2_ep', '#head_3_ep', '#head_4_ep', '#head_5_ep', '#head_7_ep', '#head_8_ep', '#head_9_ep', '#head_10_ep', '#head_11_ep',],
 	'Sent to OEM' :                 ['#head_2_ep', '#head_3_ep', '#head_4_ep', '#head_5_ep', '#head_6_ep', '#head_8_ep', '#head_9_ep', '#head_10_ep', '#head_11_ep',],
 	'Intervention' :                ['#head_2_ep', '#head_3_ep', '#head_4_ep', '#head_5_ep', '#head_6_ep', '#head_7_ep', '#head_8_ep', '#head_9_ep', '#head_10_ep', '#head_11_ep'],
-	'Close to confirm' :            ['#head_2_ep', '#head_3_ep', '#head_4_ep', '#head_5_ep', '#head_6_ep', '#head_7_ep', '#head_8_ep', '#head_11_ep'],
-	'Closed' :                      ['#head_2_ep', '#head_3_ep', '#head_4_ep', '#head_5_ep', '#head_6_ep', '#head_7_ep', '#head_8_ep', '#head_11_ep']
+	'Close to confirm' :            ['#head_2_ep', '#head_3_ep', '#head_4_ep', '#head_5_ep', '#head_6_ep', '#head_7_ep', '#head_10_ep', '#head_11_ep'],
+	'Closed' :                      ['#head_2_ep', '#head_3_ep', '#head_4_ep', '#head_5_ep', '#head_6_ep', '#head_7_ep', '#head_10_ep', '#head_11_ep']
 };
 
 // Just in case, we check if the page is an edit page before starting the machine

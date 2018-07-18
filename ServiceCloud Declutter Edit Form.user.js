@@ -21,6 +21,7 @@ var targets = {
 	'Pending Finance Approval' :    ['#head_2_ep', '#head_3_ep', '#head_4_ep', '#head_5_ep', '#head_6_ep', '#head_7_ep', '#head_8_ep', '#head_9_ep', '#head_10_ep', '#head_11_ep'],
 	'Pending Quotation' :           ['#head_2_ep', '#head_4_ep', '#head_5_ep', '#head_6_ep', '#head_7_ep', '#head_8_ep', '#head_9_ep', '#head_11_ep'],
 	'Waiting - Customer' :          ['#head_2_ep', '#head_3_ep', '#head_4_ep', '#head_5_ep', '#head_6_ep', '#head_7_ep', '#head_8_ep', '#head_9_ep', '#head_10_ep', '#head_11_ep'],
+	'Waiting - Return' :          ['#head_2_ep', '#head_3_ep', '#head_4_ep', '#head_5_ep', '#head_6_ep', '#head_7_ep', '#head_8_ep', '#head_9_ep', '#head_10_ep', '#head_11_ep'],
 	'Sent to License' :             ['#head_2_ep', '#head_3_ep', '#head_4_ep', '#head_5_ep', '#head_6_ep', '#head_7_ep', '#head_9_ep', '#head_10_ep', '#head_11_ep',],
 	'Sent to R&D' :                 ['#head_2_ep', '#head_3_ep', '#head_4_ep', '#head_5_ep', '#head_6_ep', '#head_8_ep', '#head_9_ep', '#head_10_ep', '#head_11_ep',],
 	'Sent to OEM' :                 ['#head_2_ep', '#head_3_ep', '#head_4_ep', '#head_5_ep', '#head_6_ep', '#head_8_ep', '#head_9_ep', '#head_10_ep', '#head_11_ep',],

@@ -1,6 +1,6 @@
 // ==UserScript==
-// @name        ServiceCloud Declutter Edit form_test
-// @author      bevi@esko.com
+// @name        ServiceCloud Declutter Edit form
+// @author      bevi@esko.com / updated by TD
 // @namespace   com.esko.bevi.scdeclutt.edit
 // @description Hide some panels from ServiceCloud's case editing form
 // @downloadURL https://github.com/tuxfre/esko-SC-scripts/raw/master/ServiceCloud%20Declutter%20Edit%20Form.user.js
@@ -8,7 +8,7 @@
 // @include     /^http(s)?:\/\/(esko--accept\.cs83\.my\.salesforce\.com)\/([^\/]+)\/e\?(.*)$/
 // @require     http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js
 // @require     https://gist.githubusercontent.com/BrockA/2625891/raw/9c97aa67ff9c5d56be34a55ad6c18a314e5eb548/waitForKeyElements.js
-// @version     10
+// @version     11
 // @icon        data:image/gif;base64,R0lGODlhIAAgAKIHAAGd3K/CNOz4/aje8zGv3HLJ63PAsv///yH5BAEAAAcALAAAAAAgACAAQAPGeLrc/k4MQKu9lIxRyhaCIhBVYAZGdgZYCwwMKLmFLEOPDeL8MgKEFXBFclkIoMJxRTRmaqGedEqtigSFYmYgGRAInV3vlzGsDFonoCZSAlAAQyqeKrDUFK7FHCDJh3B4bBJueBYeNmOEX4hRVo+QkZKTV4SNBzpiUlguXxcamRFphhhgmgIVQSZyJ6NGgz98Jl9npFwTFLOlJqQ1FkIqJ4ZIZIAEfGi6amyYacdnrk8dXI6YXVlGX4yam9hHXJTWOuHk5RAJADs=
 // @grant       none
 // ==/UserScript==

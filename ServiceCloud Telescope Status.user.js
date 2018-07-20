@@ -108,16 +108,15 @@ switch (License) {
 var statusLed;
 var teleScopeIcon='';
 var difference;
-var cuscode = jQuery(jQuery('.efhpFieldValue').get(-2)).text().trim();
+var cuscode = jQuery('.efhpFieldValue').eq(-2).text().trim();
 
 var teleScopeURL = 'http://' + teleBaseUrl + cuscode + '/systeminfo/html/Most_Recent.html';
 
 var dropDownMenu = '<ul class="menu">\n\t<li>\n\t\t<a href="#" id="cusCode">'+cuscode+'</a>\n\t\t<ul>\n\t\t\t<li><a href="'+teleScopeURL+'" target="_blank">Latest Telescope report</a></li>\n\t\t\t<li><a href="http://tbp.esko.com/?companycode='+cuscode+'" target="_blank">The Big Picture</a></li>\n\t\t\t<li><a href="'+licBaseUrl+cuscode+'" target="_blank">'+ License +'</a></li>\n\t\t</ul>\n\t</li>\n</ul>';
-jQuery(jQuery('.efhpFieldValue').get(-2)).html(dropDownMenu);
+jQuery('.efhpFieldValue').eq(-2).html(dropDownMenu);
 jQuery('.menu').dropit();
 jQuery('.efhpRow').css('overflow', 'visible');
-jQuery(jQuery('.efhpFieldValue').get(-2)).css('overflow', 'visible');
-
+jQuery('.efhpFieldValue').eq(-2).css('overflow', 'visible');
 
 if (DisplayIcon === 'Yes') {
 	teleScopeIcon = "&nbsp;|&nbsp;<img id=\"teleScopeIcon\" src=\"data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAQAAABKfvVzAAAAAmJLR0QAAKqNIzIAAAAJcEhZcwAAZToAAGU6Af2/hp8AAAGgSURBVDjLjdNNS5RRGIfx34wT0kiRkUpUFL1AQYYbEQmxxLJhGGfRIigI2rRq28pv0C5a+xFKTCyjrEAyaJHMQplaRPaGRWHJWA7MPE+badKZccZzNofr/K/nue/DOWxtXPdFaM7extGd+t3yXiiUczFSJ9rshCFJXXaU2b1YzWiTgwak9Nrj3ycDEcuaKv8Q0a7XsLMOaCqxokXT5rV4bKG62ow1YWkGloy55lBZxojTIGXGSjka+uW5m05p3lhCTNJRBQmXHSuxvKwp92Ws1mrwrlXLQoFAwTuj0tq06NNVKx7TLi7ilQfyvpv2QdEuo9LGXFWoVq64Y0jrBnZOTuij47XPPFrFbpcav9H4IsA+CyVhSnwrwiV/LFrzyQ89lZvV5cSkrXiiYNJ2icbCEWfMytrmpTeSdjcSBnUYlxO15KFO3fWFuGGfPRNFYFJRqr5wUo+nFkURNee18/bXExLixkvriN8mHNa3udAq6a3ZdeSRn9JimwndOk35uo5kvdBfvsdVQkpgYgPJG9dmsLbQYcC8TEVXM7658P8Z/QUVsHptDpVaBgAAACV0RVh0ZGF0ZTpjcmVhdGUAMjAxNC0xMC0yMlQyMzoyNTo1OS0wNDowMHaBpzYAAAAldEVYdGRhdGU6bW9kaWZ5ADIwMTQtMTAtMjJUMjM6MjU6NTktMDQ6MDAH3B+KAAAAGXRFWHRTb2Z0d2FyZQB3d3cuaW5rc2NhcGUub3Jnm+48GgAAAABJRU5ErkJggg==\" height=\"20\" width=\"20\" boder=\"0\">";

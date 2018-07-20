@@ -10,7 +10,7 @@
 // @require     https://raw.githubusercontent.com/sizzlemctwizzle/GM_config/master/gm_config.js
 // @require     https://raw.githubusercontent.com/gilbitron/Dropit/master/dropit.js
 // @resource    dropitCSS https://raw.githubusercontent.com/tuxfre/esko-SC-scripts/master/.resources/dropit.css
-// @version     12
+// @version     13
 // @icon        data:image/gif;base64,R0lGODlhIAAgAKIHAAGd3K/CNOz4/aje8zGv3HLJ63PAsv///yH5BAEAAAcALAAAAAAgACAAQAPGeLrc/k4MQKu9lIxRyhaCIhBVYAZGdgZYCwwMKLmFLEOPDeL8MgKEFXBFclkIoMJxRTRmaqGedEqtigSFYmYgGRAInV3vlzGsDFonoCZSAlAAQyqeKrDUFK7FHCDJh3B4bBJueBYeNmOEX4hRVo+QkZKTV4SNBzpiUlguXxcamRFphhhgmgIVQSZyJ6NGgz98Jl9npFwTFLOlJqQ1FkIqJ4ZIZIAEfGi6amyYacdnrk8dXI6YXVlGX4yam9hHXJTWOuHk5RAJADs=
 // @grant       GM_getValue
 // @grant       GM_setValue
@@ -108,16 +108,15 @@ switch (License) {
 var statusLed;
 var teleScopeIcon='';
 var difference;
-var cusasset = jQuery('.efhpFieldValue').last().text().trim();
-var cuscode = cusasset.substring(0,cusasset.indexOf("_"));
+var cuscode = jQuery(jQuery('.efhpFieldValue').get(-2)).text().trim();
 
 var teleScopeURL = 'http://' + teleBaseUrl + cuscode + '/systeminfo/html/Most_Recent.html';
 
-var dropDownMenu = '<ul class="menu">\n\t<li>\n\t\t<a href="#" id="cusCode">'+cusasset+'</a>\n\t\t<ul>\n\t\t\t<li><a href="'+teleScopeURL+'" target="_blank">Latest Telescope report</a></li>\n\t\t\t<li><a href="http://tbp.esko.com/?companycode='+cuscode+'" target="_blank">The Big Picture</a></li>\n\t\t\t<li><a href="'+licBaseUrl+cuscode+'" target="_blank">'+ License +'</a></li>\n\t\t</ul>\n\t</li>\n</ul>';
-jQuery('.efhpFieldValue').last().html(dropDownMenu);
+var dropDownMenu = '<ul class="menu">\n\t<li>\n\t\t<a href="#" id="cusCode">'+cuscode+'</a>\n\t\t<ul>\n\t\t\t<li><a href="'+teleScopeURL+'" target="_blank">Latest Telescope report</a></li>\n\t\t\t<li><a href="http://tbp.esko.com/?companycode='+cuscode+'" target="_blank">The Big Picture</a></li>\n\t\t\t<li><a href="'+licBaseUrl+cuscode+'" target="_blank">'+ License +'</a></li>\n\t\t</ul>\n\t</li>\n</ul>';
+jQuery(jQuery('.efhpFieldValue').get(-2)).html(dropDownMenu);
 jQuery('.menu').dropit();
 jQuery('.efhpRow').css('overflow', 'visible');
-jQuery('.efhpFieldValue').last().css('overflow', 'visible');
+jQuery(jQuery('.efhpFieldValue').get(-2)).css('overflow', 'visible');
 
 
 if (DisplayIcon === 'Yes') {

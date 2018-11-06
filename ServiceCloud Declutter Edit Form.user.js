@@ -8,7 +8,7 @@
 // @include     /^http(s)?:\/\/(esko--accept\.cs83\.my\.salesforce\.com)\/([^\/]+)\/e\?(.*)$/
 // @require     http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js
 // @require     https://gist.githubusercontent.com/BrockA/2625891/raw/9c97aa67ff9c5d56be34a55ad6c18a314e5eb548/waitForKeyElements.js
-// @version     15
+// @version     16
 // @icon        data:image/gif;base64,R0lGODlhIAAgAKIHAAGd3K/CNOz4/aje8zGv3HLJ63PAsv///yH5BAEAAAcALAAAAAAgACAAQAPGeLrc/k4MQKu9lIxRyhaCIhBVYAZGdgZYCwwMKLmFLEOPDeL8MgKEFXBFclkIoMJxRTRmaqGedEqtigSFYmYgGRAInV3vlzGsDFonoCZSAlAAQyqeKrDUFK7FHCDJh3B4bBJueBYeNmOEX4hRVo+QkZKTV4SNBzpiUlguXxcamRFphhhgmgIVQSZyJ6NGgz98Jl9npFwTFLOlJqQ1FkIqJ4ZIZIAEfGi6amyYacdnrk8dXI6YXVlGX4yam9hHXJTWOuHk5RAJADs=
 // @grant       none
 // ==/UserScript==
@@ -24,7 +24,7 @@ var targets = {
 	'Waiting - Return' :         	['#head_2_ep', '#head_3_ep', '#head_4_ep', '#head_5_ep', '#head_6_ep', '#head_7_ep', '#head_8_ep', '#head_9_ep', '#head_10_ep', '#head_11_ep'],
      	'Waiting' :                     ['#head_2_ep', '#head_3_ep', '#head_4_ep', '#head_5_ep', '#head_6_ep', '#head_7_ep', '#head_8_ep', '#head_9_ep', '#head_10_ep', '#head_11_ep'],
 	'Sent to License' :             ['#head_2_ep', '#head_3_ep', '#head_4_ep', '#head_5_ep', '#head_6_ep', '#head_8_ep', '#head_9_ep', '#head_10_ep', '#head_11_ep',],
-	'Sent to R&D' :                 ['#head_2_ep', '#head_3_ep', '#head_4_ep', '#head_5_ep', '#head_7_ep', '#head_8_ep', '#head_9_ep', '#head_10_ep', '#head_11_ep',],
+	'Sent to R&D' :                 ['#head_2_ep', '#head_3_ep', '#head_5_ep', '#head_7_ep', '#head_8_ep', '#head_9_ep', '#head_10_ep', '#head_11_ep',],
 	'Sent to OEM' :                 ['#head_2_ep', '#head_3_ep', '#head_4_ep', '#head_5_ep', '#head_6_ep', '#head_8_ep', '#head_9_ep', '#head_10_ep', '#head_11_ep',],
 	'Intervention' :                ['#head_2_ep', '#head_3_ep', '#head_4_ep', '#head_5_ep', '#head_6_ep', '#head_7_ep', '#head_8_ep', '#head_9_ep', '#head_10_ep', '#head_11_ep'],
 	'Close to confirm' :            ['#head_2_ep', '#head_3_ep', '#head_4_ep', '#head_5_ep', '#head_6_ep', '#head_7_ep', '#head_10_ep', '#head_11_ep'],
